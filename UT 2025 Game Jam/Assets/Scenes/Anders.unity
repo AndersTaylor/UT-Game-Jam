@@ -615,8 +615,8 @@ GameObject:
   - component: {fileID: 1213262236}
   - component: {fileID: 1213262237}
   - component: {fileID: 1213262239}
-  - component: {fileID: 1213262238}
   - component: {fileID: 1213262240}
+  - component: {fileID: 1213262238}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -717,6 +717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerObject: {fileID: 1786553143}
   totalTime: 10
+  shouldDecrementTimer: 1
 --- !u!1 &1362933724
 GameObject:
   m_ObjectHideFlags: 0

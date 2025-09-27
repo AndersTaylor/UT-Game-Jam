@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class MainTimer : MonoBehaviour
+public class MiniGameTimer : MonoBehaviour
 {
     public GameObject timerObject;
 
@@ -16,12 +16,9 @@ public class MainTimer : MonoBehaviour
     }
 
     private void Update()
-    {            
-        DecrementTimer();
-
+    {
         if (shouldDecrementTimer)
-        {
-        }
+            DecrementTimer();
     }
 
     public void ResetTimer(float newTotalTime)

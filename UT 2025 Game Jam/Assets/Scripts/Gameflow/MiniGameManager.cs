@@ -43,5 +43,7 @@ public class MiniGameManager : MonoBehaviour
         var miniGameName = randomizeMiniGames();
         var mingameTime = timeToCompleteGame();
         SceneManager.LoadScene(miniGameName);
+        
+        GetComponent<MiniGameTimer>().ResetTimer(mingameTime);
     }
 }
