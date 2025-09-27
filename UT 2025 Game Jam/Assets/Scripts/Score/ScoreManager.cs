@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [Header("Events")] public GameEvent onScoreChanged;
-    
     // Set Singleton
     private static ScoreManager instance;
     private void Awake()
@@ -21,8 +19,12 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private int totalScore = 0;
+    [Header("Events")] public GameEvent onScoreChanged, onMultChanged;
+
     public TMP_Text scoreText;
+    public TMP_Text multText;
+    public int totalScore = 0;
+    public float totalMult = 1f;
 
     void Update()
     {
@@ -35,8 +37,17 @@ public class ScoreManager : MonoBehaviour
 
     public void ChangeScore(int scoreToAdd)
     {
-        onScoreChanged.Raise(this, totalScore);
         totalScore += scoreToAdd;
         scoreText.text = totalScore.ToString();
+        
+        onScoreChanged.Raise(this, totalScore);
+    }
+
+    public void ChangeMult(float multToAdd)
+    {
+        totalMult += multToAdd;
+        multText.text = totalMult.ToString();
+        
+        onMultChanged.Raise(this, totalMult);
     }
 }
