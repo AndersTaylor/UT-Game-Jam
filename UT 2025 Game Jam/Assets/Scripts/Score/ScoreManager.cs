@@ -19,12 +19,12 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    [Header("Events")] public GameEvent onScoreChanged, onMultChanged;
-
     public TMP_Text scoreText;
     public TMP_Text multText;
     public int totalScore = 0;
     public float totalMult = 1f;
+    
+    public AudioClip scoreIncrimentSound;
 
     void Update()
     {
@@ -37,17 +37,20 @@ public class ScoreManager : MonoBehaviour
 
     public void ChangeScore(int scoreToAdd)
     {
+        int tempScore = totalScore;
         totalScore += scoreToAdd;
-        scoreText.text = totalScore.ToString();
-        
-        onScoreChanged.Raise(this, totalScore);
+
+        while (tempScore < totalScore)
+        {
+            tempScore++;
+            
+            scoreText.text = totalScore.ToString();
+        }
     }
 
     public void ChangeMult(float multToAdd)
     {
         totalMult += multToAdd;
         multText.text = totalMult.ToString();
-        
-        onMultChanged.Raise(this, totalMult);
     }
 }
