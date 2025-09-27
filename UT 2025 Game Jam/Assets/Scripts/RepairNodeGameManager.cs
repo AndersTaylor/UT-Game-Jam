@@ -7,7 +7,7 @@ public class RepairNodeGameManager : MonoBehaviour
     [SerializeField] float time = 10f;
     [SerializeField] TextMeshProUGUI timerText;
 
-    int numNodes;
+    GameObject[] numNodes;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -18,7 +18,7 @@ public class RepairNodeGameManager : MonoBehaviour
         else
         {
             Instance = this;
-            numNodes = GameObject.FindGameObjectsWithTag("HexNode").Length;
+            numNodes = GameObject.FindGameObjectsWithTag("HexNode");
             //DontDestroyOnLoad(gameObject);
         }
     }
@@ -37,14 +37,24 @@ public class RepairNodeGameManager : MonoBehaviour
             timerText.text = "Time: " + (int)time;
         }
 
-        if (numNodes == 0)
+        // checks if all nodes are activated
+        if (CheckNodes())
         {
             timerText.text = "Success!";
         }
     }
 
-    public void repairNode()
+    bool CheckNodes()
     {
-        numNodes--;
+        foreach (GameObject node in numNodes)
+        {
+            if (node.GetComponent<RepairNode>().repaired)
+                continue;
+            else
+                return false;
+        }
+
+        return true;
     }
+
 }

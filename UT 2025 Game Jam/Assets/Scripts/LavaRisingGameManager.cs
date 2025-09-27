@@ -6,11 +6,11 @@ public class LavaRisingGameManager : MonoBehaviour
     public static LavaRisingGameManager Instance { get; private set; }
 
     [SerializeField] float time = 10f;
-    [SerializeField] float risingSpeed = 2f;
+    [SerializeField] AnimationCurve risingCurve;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] GameObject lava;
 
-    int numNodes;
+    GameObject[] numNodes;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -21,7 +21,7 @@ public class LavaRisingGameManager : MonoBehaviour
         else
         {
             Instance = this;
-            numNodes = GameObject.FindGameObjectsWithTag("HexNode").Length;
+            numNodes = GameObject.FindGameObjectsWithTag("HexNode");
             //DontDestroyOnLoad(gameObject);
         }
     }
@@ -29,31 +29,41 @@ public class LavaRisingGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // counts down timer, has fail state
-        time -= Time.deltaTime;
-        if (time <= 0)
-        {
-            timerText.text = "Failure!";
-            lava.GetComponent<LavaController>().isGrow = false;
-        }
-        else
-        {
-            timerText.text = "Time: " + (int)time;
-            // makes lava rise
-            if (lava.GetComponent<LavaController>().isGrow)
-                lava.transform.localScale += new Vector3(0, Time.deltaTime * risingSpeed, 0);
-        }
-
-        if (numNodes == 0)
+        // checks if nodes are repaired
+        if (CheckNodes())
         {
             timerText.text = "Success!";
             lava.GetComponent<LavaController>().isGrow = false;
         }
+        else
+        {
+            // counts down timer, has fail state
+            time -= Time.deltaTime;
+            if (time <= 0 || !lava.GetComponent<LavaController>().isGrow)
+            {
+                timerText.text = "Failure!";
+                lava.GetComponent<LavaController>().isGrow = false;
+            }
+            else
+            {
+                timerText.text = "Time: " + (int)time;
+                // makes lava rise
+                if (lava.GetComponent<LavaController>().isGrow)
+                    lava.transform.localScale = new Vector3(11, risingCurve.Evaluate(time), 1);
+            }
+        }
     }
 
-    public void repairNode()
+    bool CheckNodes()
     {
-        // tracks nodes
-        numNodes--;
+        foreach (GameObject node in numNodes)
+        {
+            if (node.GetComponent<RepairNode>().repaired)
+                continue;
+            else
+                return false;
+        }
+
+        return true;
     }
 }
