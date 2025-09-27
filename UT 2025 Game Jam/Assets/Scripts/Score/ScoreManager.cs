@@ -1,6 +1,8 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -24,7 +26,14 @@ public class ScoreManager : MonoBehaviour
     public int totalScore = 0;
     public float totalMult = 1f;
     
-    public AudioClip scoreIncrimentSound;
+    private AudioSource audioSource;
+    private bool shouldIncrementScore;
+    private int tempScore;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -33,18 +42,34 @@ public class ScoreManager : MonoBehaviour
         {
             ChangeScore(30);
         }
+
+        if (shouldIncrementScore)
+        {
+            IncrementScore();
+        }
     }
 
     public void ChangeScore(int scoreToAdd)
     {
-        int tempScore = totalScore;
+        tempScore = totalScore;
         totalScore += scoreToAdd;
+        shouldIncrementScore = true;
+    }
 
-        while (tempScore < totalScore)
+    private void IncrementScore()
+    {
+        if (tempScore < totalScore)
         {
             tempScore++;
+            scoreText.text = tempScore.ToString();
+
+            audioSource.pitch = Random.Range(1f, 1.5f);
+            audioSource.Play();
             
-            scoreText.text = totalScore.ToString();
+        }
+        else
+        {
+            shouldIncrementScore = false;
         }
     }
 
