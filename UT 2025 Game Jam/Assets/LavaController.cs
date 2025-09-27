@@ -16,6 +16,6 @@ public class LavaController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Pla
+        //Pla
     }
 }
