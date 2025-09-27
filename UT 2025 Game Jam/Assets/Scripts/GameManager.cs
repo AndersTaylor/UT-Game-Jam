@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    [Header("Events")] public GameEvent onLoopCompleted;
+    [Header("Events")] public GameEvent onLoopCompleted, onLifeLost, onGameOver;
     
     public int lives;
     public int shields;
@@ -51,5 +51,23 @@ public class GameManager : MonoBehaviour
         loopsCompleted++;
         
         onLoopCompleted.Raise(this, null);
+    }
+
+    // Called when game manager hears mini game failed event raised
+    public void LoseLife()
+    {
+        lives--;
+        if (lives <= 0)
+        {
+            GameOver();
+            return;
+        }
+        
+        onLifeLost.Raise(this, lives);
+    }
+
+    public void GameOver()
+    {
+        onGameOver.Raise(this, null);
     }
 }
