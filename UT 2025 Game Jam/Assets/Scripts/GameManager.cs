@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,8 +19,14 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    [Header("Events")] 
+    public GameEvent onLoopCompleted;
+    public GameEvent onLifeLost;
+    public GameEvent onShieldLost; 
+    public GameEvent onGameOver;
     
-    [Header("Events")] public GameEvent onLoopCompleted, onLifeLost, onGameOver;
+    [Header("Other")]
     
     public int lives;
     public int shields;
@@ -35,15 +42,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        // test input
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            CompleteLoop();
-        }
-    }
-
     public void CompleteLoop()
     {
         int scoreToAdd = Mathf.RoundToInt(timeRemaining * scoreManager.totalMult);
@@ -52,22 +50,29 @@ public class GameManager : MonoBehaviour
         
         onLoopCompleted.Raise(this, null);
     }
-
-    // Called when game manager hears mini game failed event raised
-    public void LoseLife()
+    
+    // Called when game manager hears MiniGameFailed event raised
+    public void MiniGameFailed()
     {
-        lives--;
-        if (lives <= 0)
+        if (shields > 0)
         {
-            GameOver();
+            shields--;
+            onShieldLost.Raise(this, shields);
             return;
         }
         
+        lives--;
         onLifeLost.Raise(this, lives);
+        
+        if (lives <= 0)
+        {
+            GameOver();
+        }
     }
 
     public void GameOver()
     {
         onGameOver.Raise(this, null);
+        SceneManager.LoadScene("GameOver");
     }
 }
