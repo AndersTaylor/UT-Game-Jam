@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c76aa6289d4f91d4c9d04aeedae60f77
+guid: 1c29150d80e583e4c9d78bc8c55845b8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,12 +121,56 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UI_uwu_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 75
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a0c3368616fd64087d88450375242d
+      internalID: 2008668791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_uwu_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1
+        width: 76
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146e2cbab404fd6458527f62a353967a
+      internalID: 204772725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d944912d72684954b8dae92a465ffe7f
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +179,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_uwu_0: 2008668791
+      UI_uwu_1: 204772725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
