@@ -1,7 +1,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : MonoBehaviour 
 {
     public AudioClip[] songs;
 

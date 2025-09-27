@@ -21,7 +21,7 @@ public class MiniGameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        LoadMiniGames();
+            LoadMiniGames();
     }
 
     public string randomizeMiniGames()
@@ -44,7 +44,4 @@ public class MiniGameManager : MonoBehaviour
         var mingameTime = timeToCompleteGame();
         SceneManager.LoadScene(miniGameName);
     }
-
-
-    
 }
