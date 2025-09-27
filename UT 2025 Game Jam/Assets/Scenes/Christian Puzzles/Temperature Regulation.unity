@@ -824,6 +824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289690404}
   - component: {fileID: 1289690403}
+  - component: {fileID: 1289690405}
   m_Layer: 0
   m_Name: 'Directional Light '
   m_TagString: Untagged
@@ -911,6 +912,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1289690405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289690402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1319785623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,15 +1184,13 @@ MonoBehaviour:
   temperatureText: {fileID: 541741964}
   TimerText: {fileID: 197770752}
   minTemperature: 0
-  maxTemperature: 200
+  maxTemperature: 100
   decreaseRate: 5
   increaseRate: 10
-  decreaseDelay: 0.2
-  calibrationMin: 140
-  calibrationMax: 180
+  decreaseDelay: 1
+  calibrationMin: 40
+  calibrationMax: 60
   calibrationTime: 5
-  roomToLoadAfterCompletion: {fileID: 11400000, guid: 1df5a061babd16d4486f3b20b731669d, type: 2}
-  ChapterToLoadAfterCompletion: {fileID: 11400000, guid: c09ad60e92a1ba644ae1065da2e8a694, type: 2}
 --- !u!1 &1456811684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,13 +1356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4062bb2ec261747a093493fd9e9b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentChapter: {fileID: 11400000, guid: c09ad60e92a1ba644ae1065da2e8a694, type: 2}
-  currentRoom: {fileID: 11400000, guid: 1df5a061babd16d4486f3b20b731669d, type: 2}
-  StartingChapter: {fileID: 0}
-  StaringRoom: {fileID: 0}
-  CreditsChapter: {fileID: 0}
-  CreditsRoom: {fileID: 0}
-  MainMenu: 1
 --- !u!4 &1458252458
 Transform:
   m_ObjectHideFlags: 0
