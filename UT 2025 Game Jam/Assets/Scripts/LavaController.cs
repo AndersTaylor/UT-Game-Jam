@@ -16,12 +16,14 @@ public class LavaController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        // checks if player falls in lava
         PlatformerCharacterController player = other.GetComponent<PlatformerCharacterController>();
         if (player != null)
         {
             isGrow = false;
+            Debug.Log("dead");
         }
     }
 }
