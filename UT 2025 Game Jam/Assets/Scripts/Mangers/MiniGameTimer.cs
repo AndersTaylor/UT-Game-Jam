@@ -52,6 +52,9 @@ public class MiniGameTimer : MonoBehaviour
         if (timeRemaining <= 0)
         {
             ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
+            
+            shouldDecrementTimer = false;
+            
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Timer", false));
         }
     }

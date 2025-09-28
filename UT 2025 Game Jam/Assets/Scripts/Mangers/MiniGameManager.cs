@@ -122,7 +122,8 @@ public class MiniGameManager : MonoBehaviour
             //Debug.Log("Mini games list repopulated.");
         }
 
-        StartNextMiniGame();
+        SceneManager.LoadScene("Score");
+        //StartNextMiniGame();
     }
 }
 
