@@ -1,0 +1,695 @@
+fileFormatVersion: 2
+guid: 483bee9cb0e448f4990f68274260b1f5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 979
+        width: 201
+        height: 229
+      alignment: 9
+      pivot: {x: 0.43531662, y: 0.0074374937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a2a47f10cd74f479cf100739c64e98
+      internalID: -710243038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 979
+        width: 201
+        height: 220
+      alignment: 9
+      pivot: {x: 0.4333636, y: 0.008696677}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a057f7bb51efaed488383b363ca965f6
+      internalID: 801614084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_2
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 979
+        width: 201
+        height: 220
+      alignment: 9
+      pivot: {x: 0.43263054, y: 0.0062658135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1687e3e8ad7fbd49ab29e440cfd6dd3
+      internalID: -2016881762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_3
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 980
+        width: 201
+        height: 255
+      alignment: 9
+      pivot: {x: 0.3982541, y: 0.012475346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128ccf65e4d1f6a408fbc9ee1fdb0cdd
+      internalID: 655195946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_4
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 979
+        width: 201
+        height: 210
+      alignment: 9
+      pivot: {x: 0.43504098, y: 0.007005383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc2f8112b347cb4f8eab8fd78625466
+      internalID: -214877156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_5
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 979
+        width: 201
+        height: 229
+      alignment: 9
+      pivot: {x: 0.43499908, y: 0.006606456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b767e659a2a774fa8f37b32af230b2
+      internalID: 1754474027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_6
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 690
+        width: 223
+        height: 228
+      alignment: 9
+      pivot: {x: 0.3963008, y: 0.0025043152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10d79b1a2fd1d1459dcc2a0c1e5457b
+      internalID: 1104334019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 690
+        width: 225
+        height: 219
+      alignment: 9
+      pivot: {x: 0.47458455, y: 0.0030250028}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e6260d866177a4c8c322b63c5c3ec2
+      internalID: -934441216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_8
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 690
+        width: 207
+        height: 219
+      alignment: 9
+      pivot: {x: 0.42808732, y: 0.0034561506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db174eca9a59a44ba81504ed7efc28d
+      internalID: -727650711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_9
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 690
+        width: 206
+        height: 255
+      alignment: 9
+      pivot: {x: 0.4061765, y: 0.0038868624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e34bdc8c92b1945867f4a9bf807cba
+      internalID: -1407087949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_10
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 683
+        width: 206
+        height: 216
+      alignment: 9
+      pivot: {x: 0.4259857, y: 0.034782693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010716b68bf40764a8529c8246a61f0d
+      internalID: 1056103358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_11
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 690
+        width: 207
+        height: 228
+      alignment: 9
+      pivot: {x: 0.42303672, y: 0.0029122871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc469d10346530458ccb842a2c2302d
+      internalID: 1784920652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 333
+        width: 246
+        height: 294
+      alignment: 9
+      pivot: {x: 0.53857815, y: 0.002339162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51195eeedada82d4baf1abe0eb7bb8a3
+      internalID: 1886092101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_13
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 339
+        width: 246
+        height: 283
+      alignment: 9
+      pivot: {x: 0.5396155, y: 0.0050906125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77739a4d5cfb31c4ab94ed25c5946882
+      internalID: -713582720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_14
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 339
+        width: 243
+        height: 284
+      alignment: 9
+      pivot: {x: 0.533116, y: 0.0051208283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553e8392f397e5846986deefa8bd48ec
+      internalID: 532135178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_15
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 339
+        width: 235
+        height: 341
+      alignment: 9
+      pivot: {x: 0.5, y: 0.006986646}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb922e61cb84c247b5257e33c55e151
+      internalID: -1509892420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_16
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 339
+        width: 242
+        height: 286
+      alignment: 9
+      pivot: {x: 0.53390783, y: 0.0044746664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a94c094394f22a439050ebdd28e97db
+      internalID: 828449714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_17
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 339
+        width: 239
+        height: 298
+      alignment: 9
+      pivot: {x: 0.52775645, y: 0.0047947415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95574cc37d405c2499fe9d1a0503efc9
+      internalID: -2040919481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_18
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 27
+        width: 246
+        height: 229
+      alignment: 9
+      pivot: {x: 0.4315384, y: 0.006524182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e262c7b42cca5489b5841ee6346bab
+      internalID: 763779495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_19
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 29
+        width: 246
+        height: 219
+      alignment: 9
+      pivot: {x: 0.42545748, y: 0.0026077724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031f0eb61029fd140be53d00052b47ab
+      internalID: -766749959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_20
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 23
+        width: 250
+        height: 220
+      alignment: 9
+      pivot: {x: 0.42368847, y: 0.006450237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdb4e775b2115d48a262a61cbf65445
+      internalID: 276571193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_21
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 23
+        width: 248
+        height: 256
+      alignment: 9
+      pivot: {x: 0.43769518, y: 0.007100947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dee45e7cd98394db87ee91412e553b
+      internalID: 1331423419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_22
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 23
+        width: 250
+        height: 210
+      alignment: 9
+      pivot: {x: 0.43751368, y: 0.0076690493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d910f2dffe04f47b7b2975f6b754b1
+      internalID: -707013599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_LittleGuy_IdleandCelebration_23
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 23
+        width: 248
+        height: 229
+      alignment: 9
+      pivot: {x: 0.4488683, y: 0.0069218264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171c0048fed85d64cb4b5e0fddd2c8c9
+      internalID: 321310147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bd137b38316fb8b4eb98ff385881de98
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UI_LittleGuy_IdleandCelebration_0: -710243038
+      UI_LittleGuy_IdleandCelebration_1: 801614084
+      UI_LittleGuy_IdleandCelebration_10: 1056103358
+      UI_LittleGuy_IdleandCelebration_11: 1784920652
+      UI_LittleGuy_IdleandCelebration_12: 1886092101
+      UI_LittleGuy_IdleandCelebration_13: -713582720
+      UI_LittleGuy_IdleandCelebration_14: 532135178
+      UI_LittleGuy_IdleandCelebration_15: -1509892420
+      UI_LittleGuy_IdleandCelebration_16: 828449714
+      UI_LittleGuy_IdleandCelebration_17: -2040919481
+      UI_LittleGuy_IdleandCelebration_18: 763779495
+      UI_LittleGuy_IdleandCelebration_19: -766749959
+      UI_LittleGuy_IdleandCelebration_2: -2016881762
+      UI_LittleGuy_IdleandCelebration_20: 276571193
+      UI_LittleGuy_IdleandCelebration_21: 1331423419
+      UI_LittleGuy_IdleandCelebration_22: -707013599
+      UI_LittleGuy_IdleandCelebration_23: 321310147
+      UI_LittleGuy_IdleandCelebration_3: 655195946
+      UI_LittleGuy_IdleandCelebration_4: -214877156
+      UI_LittleGuy_IdleandCelebration_5: 1754474027
+      UI_LittleGuy_IdleandCelebration_6: 1104334019
+      UI_LittleGuy_IdleandCelebration_7: -934441216
+      UI_LittleGuy_IdleandCelebration_8: -727650711
+      UI_LittleGuy_IdleandCelebration_9: -1407087949
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

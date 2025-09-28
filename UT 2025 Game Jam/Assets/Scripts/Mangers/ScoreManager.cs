@@ -62,7 +62,8 @@ public class ScoreManager : MonoBehaviour
         Debug.Log("Multiplier: " + multiplier + " Streak: " + streak);
         shouldIncrementScore = true;
         
-        scoreText.gameObject.SetActive(true);
+        //scoreText.gameObject.SetActive(true);
+        //multText.gameObject.SetActive(true);
     }
 
     private void IncrementScore()
@@ -78,8 +79,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            shouldIncrementScore = false;
-            StartCoroutine(WaitThenLoad(3));
+            MiniGameTimer.Instance.shouldDecrementTimer = true;
         }
     }
 
@@ -116,14 +116,5 @@ public class ScoreManager : MonoBehaviour
     {
         totalMult += multToAdd;
         multText.text =  "Streak Multiplier: " + totalMult;
-    }
-
-    private IEnumerator WaitThenLoad(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        scoreText.gameObject.SetActive(false);
-
-        MiniGameTimer.Instance.shouldDecrementTimer = true;
-        MiniGameManager.Instance.StartNextMiniGame();
     }
 }

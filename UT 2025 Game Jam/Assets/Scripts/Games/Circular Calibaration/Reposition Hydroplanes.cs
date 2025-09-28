@@ -12,7 +12,9 @@ public class RepositionHydroplanes : MonoBehaviour
     private bool isRotating = true; // Flag to check if the hydroplanes are rotating
     [SerializeField] private HydroplanesAligned hydroplanesAlignedObject;
     private HydroplanesAligned hydroplanesAlignedScript;
-    
+
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip clip;
 
     public event Action OnIndicatorAligned; // Event to notify when the indicator is aligned with the triangle
 
@@ -50,6 +52,7 @@ public class RepositionHydroplanes : MonoBehaviour
     
     public void OnWheelClicked()
     {
+        source.PlayOneShot(clip);
         // Stop the rotation
         isRotating = false;
 

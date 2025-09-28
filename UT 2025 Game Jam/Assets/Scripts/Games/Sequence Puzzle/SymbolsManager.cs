@@ -19,6 +19,11 @@ public class SymbolsManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image GreenImage; // Reference to the green image component
     [SerializeField] private UnityEngine.UI.Image YellowImage; // Reference to the yellow image component
     [SerializeField] private Color GreenColor;
+
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip beep;
+    [SerializeField] AudioClip click;
+
     private string[] repeatedSequence; // Array to hold the repeated sequence
 
     private int currentSequenceIndex = 0; // Variable to keep track of the current index in the sequence
@@ -63,6 +68,7 @@ public class SymbolsManager : MonoBehaviour
 
     public void OnButtonPress(string color)
     {
+        source.PlayOneShot(click);
         if (maxAttemptsReached)
         {
            // print("Max attempts reached. Sequence failed.");
@@ -186,7 +192,8 @@ public class SymbolsManager : MonoBehaviour
         setFlag(true);
 
         Color originalColor = image.color;
-        image.color = Color.white;
+        image.color = Color.yellow;
+        source.PlayOneShot(beep);
         yield return new WaitForSeconds(0.5f);
         image.color = originalColor;
         yield return new WaitForSeconds(0.2f);
