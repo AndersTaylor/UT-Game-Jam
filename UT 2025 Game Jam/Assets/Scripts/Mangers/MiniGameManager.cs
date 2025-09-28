@@ -81,6 +81,7 @@ public class MiniGameManager : MonoBehaviour
 
     }
 
+    
     public void StartNextMiniGame()
     {
 
@@ -122,8 +123,8 @@ public class MiniGameManager : MonoBehaviour
             //Debug.Log("Mini games list repopulated.");
         }
 
-        SceneManager.LoadScene("Score");
-        //StartNextMiniGame();
+        //SceneManager.LoadScene("Score");
+        StartNextMiniGame();
     }
 }
 
