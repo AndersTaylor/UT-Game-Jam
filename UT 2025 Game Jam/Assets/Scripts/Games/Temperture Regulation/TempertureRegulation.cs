@@ -80,7 +80,6 @@ public class TempertureRegulation : MonoBehaviour
             {
                 //Debug.Log("Temperature out of range. Resetting calibration timer.");
                 elapsedTime = 0f; // Reset the timer
-                MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Temperature Regulation", false));
             }
             else
             {

@@ -7,9 +7,9 @@ public class HydroplanesAligned : MonoBehaviour
     public int attemptsRemaining; // Number of attempts remaining
     public TMP_Text AttemptsText; // Reference to the TextMeshProUGUI component to display attempts
     //[SerializeField] private Room roomToLoadAfterCompletion; // Reference to the room to load after completion
-   // [SerializeField] private Chapter ChapterToLoadAfterCompletion; // Reference to the room to load after completion
-  //  [SerializeField] private Room roomToLoadAfterFailure; // Reference to the room to load after completion
-  //  [SerializeField] private Chapter ChapterToLoadAfterFailure; 
+   //[SerializeField] private Chapter ChapterToLoadAfterCompletion; // Reference to the room to load after completion
+  //[SerializeField] private Room roomToLoadAfterFailure; // Reference to the room to load after completion
+  //[SerializeField] private Chapter ChapterToLoadAfterFailure; 
 
     void Start()
     {
@@ -40,7 +40,7 @@ public class HydroplanesAligned : MonoBehaviour
         }
         else if (attemptsRemaining == 0)
         { 
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CircularCalibration", false));
+            
         }
 
 

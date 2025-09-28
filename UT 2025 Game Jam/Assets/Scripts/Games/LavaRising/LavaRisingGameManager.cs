@@ -40,8 +40,7 @@ public class LavaRisingGameManager : MonoBehaviour
         else
         {
             // counts down timer, has fail state
-            time -= Time.deltaTime;
-            if (time <= 0 || !lava.GetComponent<LavaController>().isGrow)
+            if ( !lava.GetComponent<LavaController>().isGrow)
             {
                 MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("LavaRising", false));
                 
@@ -50,6 +49,7 @@ public class LavaRisingGameManager : MonoBehaviour
             }
             else
             {
+                time -= Time.deltaTime;
                 timerText.text = "Time: " + (int)time;
                 // makes lava rise
                 if (lava.GetComponent<LavaController>().isGrow)
