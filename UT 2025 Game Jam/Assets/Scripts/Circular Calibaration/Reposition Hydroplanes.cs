@@ -57,7 +57,7 @@ public class RepositionHydroplanes : MonoBehaviour
 
         if (IsIndicatorAligned)
         {
-            Debug.Log("Indicator is aligned with the triangle!");
+           // Debug.Log("Indicator is aligned with the triangle!");
 
             // Snap the indicator to the triangle's position
             Vector3 offsetPosition = triangle.position - new Vector3(10f, 0f, 0f);
@@ -70,7 +70,7 @@ public class RepositionHydroplanes : MonoBehaviour
         else
         {
             
-            Debug.Log("Indicator is not aligned with the triangle!");
+           // Debug.Log("Indicator is not aligned with the triangle!");
             hydroplanesAlignedScript.attemptsRemaining--;
             hydroplanesAlignedScript.AttemptsText.text = $"Incorrect alignment. Attempts remaining: {hydroplanesAlignedScript.attemptsRemaining}";
             if (hydroplanesAlignedScript.attemptsRemaining <= 0)

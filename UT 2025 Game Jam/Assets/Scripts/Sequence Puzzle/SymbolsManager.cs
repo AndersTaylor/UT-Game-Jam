@@ -49,7 +49,7 @@ public class SymbolsManager : MonoBehaviour
         while (true) // Infinite loop to repeat the sequence
         {
 
-            print("Randomized sequence: " + string.Join(", ", repeatedSequence)); // Print the randomized sequence to the console
+         //   print("Randomized sequence: " + string.Join(", ", repeatedSequence)); // Print the randomized sequence to the console
             yield return StartCoroutine(FlashSequence(repeatedSequence)); // Start the coroutine to show the symbols
             yield return new WaitForSeconds(SequenceRepeatRate); // Wait for 1 second before repeating the sequence
         }
@@ -65,7 +65,7 @@ public class SymbolsManager : MonoBehaviour
     {
         if (maxAttemptsReached)
         {
-            print("Max attempts reached. Sequence failed.");
+           // print("Max attempts reached. Sequence failed.");
             return; // Exit if max attempts have been reached
         }
         if (repeatedSequence[currentSequenceIndex] == color)
@@ -73,7 +73,7 @@ public class SymbolsManager : MonoBehaviour
             currentSequenceIndex++;
             if (currentSequenceIndex >= repeatedSequence.Length)
             {
-                print("Sequence completed successfully!");
+              //  print("Sequence completed successfully!");
                 currentSequenceIndex = 0;
                 currentAttempts = 0; // Reset attempts on success
                 AttemptsText.text = $"Attempts: {currentAttempts} remaning"; // Update text on success
@@ -82,13 +82,13 @@ public class SymbolsManager : MonoBehaviour
         }
         else
         {
-            print("Wrong button! Sequence failed.");
+          //  print("Wrong button! Sequence failed.");
             currentSequenceIndex = 0;
             currentAttempts--;
             AttemptsText.text = $"Attempts: {currentAttempts} remaning"; // Update text on failure
             if (currentAttempts == 0)
             {
-                print("Max attempts reached. Sequence failed.");
+              //  print("Max attempts reached. Sequence failed.");
                 AttemptsText.text =$"Reactor Restart Failed"; // Update text on failure
                 maxAttemptsReached = true; 
                 StopAllCoroutines(); // Stop all ongoing flashes

@@ -1,8 +1,24 @@
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour 
 {
+    // Set Singleton
+    private static AudioManager instance;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     public AudioClip[] songs;
 
     private AudioSource songPlayer;
