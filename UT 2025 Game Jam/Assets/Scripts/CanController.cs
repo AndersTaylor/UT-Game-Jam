@@ -39,16 +39,22 @@ public class CanController : MonoBehaviour
         {
             timerText.text = "you disappoint me. - Hideo Kojima";
             shakeText.text = "Failure!";
+            
+            GameManager.Instance.MiniGameFailed();
         }
         else if (spill && !success)
         {
             shakeText.text = "You spilled!";
             timerText.text = "\"no more metal gear.\" - Hideo \"Game\" Kojima";
+            
+            GameManager.Instance.MiniGameFailed();
         }
         else if (success && !spill)
         {
             shakeText.text = "Success!";
             timerText.text = "\"hideo game.\" - Hideo \"Game\" Kojima";
+            
+            GameManager.Instance.MiniGameSuccess();
         }
         else
         {

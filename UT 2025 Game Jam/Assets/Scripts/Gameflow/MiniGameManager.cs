@@ -57,19 +57,19 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-
     public string randomizeMiniGames()
     {
-        selectedGameIndex = Random.Range(0, miniGames.Count);
-       // Debug.Log(miniGames[selectedGameIndex].miniGameName);
+        selectedGameIndex = Random.Range(0, miniGames.Count - 1);
+        //Debug.Log(miniGames[selectedGameIndex].miniGameName);
         return miniGames[selectedGameIndex].miniGameName;
 
     }
 
     public float timeToCompleteGame()
     {
-        Debug.Log(miniGames[selectedGameIndex].timeLimit);
+        //Debug.Log(miniGames[selectedGameIndex].timeLimit);
+        Debug.Log("selected index: " + selectedGameIndex);
+        Debug.Log("games count: " + miniGames.Count);
         return miniGames[selectedGameIndex].timeLimit;
     }
 
@@ -118,7 +118,9 @@ public class MiniGameManager : MonoBehaviour
             gamesPlayed = 0;
             Debug.Log("Mini games list repopulated.");
         }
-
+        
+        MiniGameTimer.Instance.ResetTimer(timeToCompleteGame());
+        
         StartNextMiniGame();
     }
 }

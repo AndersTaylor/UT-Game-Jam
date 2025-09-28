@@ -36,14 +36,12 @@ public class HydroplanesAligned : MonoBehaviour
         // Check if all indicators are aligned
         if (AreAllIndicatorsAligned())
         {
-            
+            GameManager.Instance.MiniGameSuccess();
         }
         else if (attemptsRemaining == 0)
         { 
-            
+            GameManager.Instance.MiniGameFailed();
         }
-
-
     }
 
     private bool AreAllIndicatorsAligned()

@@ -55,17 +55,14 @@ public class SymbolsManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnButtonPress(string color)
     {
         if (maxAttemptsReached)
         {
            // print("Max attempts reached. Sequence failed.");
+           
+           GameManager.Instance.MiniGameFailed();
+           
             return; // Exit if max attempts have been reached
         }
         if (repeatedSequence[currentSequenceIndex] == color)
@@ -78,6 +75,7 @@ public class SymbolsManager : MonoBehaviour
                 currentAttempts = 0; // Reset attempts on success
                 AttemptsText.text = $"Attempts: {currentAttempts} remaning"; // Update text on success
                
+                GameManager.Instance.MiniGameSuccess();
             }
         }
         else
@@ -91,6 +89,9 @@ public class SymbolsManager : MonoBehaviour
               //  print("Max attempts reached. Sequence failed.");
                 AttemptsText.text =$"Reactor Restart Failed"; // Update text on failure
                 maxAttemptsReached = true; 
+                
+                GameManager.Instance.MiniGameFailed();
+                
                 StopAllCoroutines(); // Stop all ongoing flashes
                 
                 

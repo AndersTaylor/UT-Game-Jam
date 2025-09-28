@@ -36,6 +36,8 @@ public class MiniGameTimer : MonoBehaviour
     {
         totalTime = newTotalTime;
         timeRemaining = totalTime;
+
+        shouldDecrementTimer = true;
     }
 
     private void DecrementTimer()
@@ -46,5 +48,11 @@ public class MiniGameTimer : MonoBehaviour
         var newRot = Vector3.Lerp(new Vector3(0, 0, -5), new Vector3(0, 0, 95), a);
 
         timerObject.transform.rotation = Quaternion.Euler(newRot);
+
+        if (timeRemaining <= 0)
+        {
+            GameManager.Instance.MiniGameFailed();
+            shouldDecrementTimer = false;
+        }
     }
 }
