@@ -73,7 +73,7 @@ public class CanController : MonoBehaviour
     {
         if (clicked)
         {
-            if (timePassed - timeClicked < .1f && !spill)
+            if (timePassed - timeClicked < .1f && !spill && !success)
             {
                 //numStrikes--;
                 //if (numStrikes <= 0)
@@ -93,7 +93,7 @@ public class CanController : MonoBehaviour
         angle *= -1.5f;
         oscillate *= 1.1f;
         numToShake--;
-        if (numToShake <= 0 && !success)
+        if (numToShake <= 0 && !success && !spill)
         {
             success = true;
             PlayClip(sodaPop);
