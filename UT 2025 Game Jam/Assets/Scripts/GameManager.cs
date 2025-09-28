@@ -42,12 +42,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        MiniGameEventBus.OnMiniGameComplete += MiniGameSuccess;
-        MiniGameEventBus.onLoopCompleted += CompleteLoop;
-    }
-
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -70,30 +64,14 @@ public class GameManager : MonoBehaviour
         
         onLoopCompleted.Raise(this, null);
     }
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/GameManager.cs
     
     public void MiniGameFailed()
-=======
-
-    public void MiniGameSuccess(MiniGameEventBus.Result result)
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/GameManager.cs
     {
-        if (result.success)
+        if (shields > 0)
         {
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/GameManager.cs
             shields--;
             onShieldLost.Raise(this, shields);
             return;
-=======
-            MiniGameManager.Instance.OnMiniGameComplete();
-            scoreManager.ChangeScore(result.scoreGained);
-            Debug.Log( "Game Complete" + result.miniGameName + " Score Gained: " + result.scoreGained);
-
-            if (result.scoreGained != 0)
-            {
-                scoreManager.ChangeScore(result.scoreGained);
-            }
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/GameManager.cs
         }
         
         lives--;
@@ -101,7 +79,6 @@ public class GameManager : MonoBehaviour
         
         if (lives <= 0)
         {
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/GameManager.cs
             GameOver();
         }
     }
@@ -109,27 +86,6 @@ public class GameManager : MonoBehaviour
     public void MiniGameSuccess()
     {
         
-=======
-            if (shields > 0)
-            {
-                shields--;
-            }
-            else
-            {
-                lives--;
-                Debug.Log("lives: " + lives);
-                Debug.Log( "Game failed: " + result.miniGameName);
-
-                if (lives <= 0)
-                {
-                    GameOver();
-                    return;
-                }
-            }
-
-            MiniGameManager.Instance.OnMiniGameComplete();
-        }
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/GameManager.cs
     }
     
     public void GameOver()

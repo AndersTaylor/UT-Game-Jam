@@ -28,8 +28,8 @@ public class EnergyCoreManager : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
             {
                 timerText.text = "Success!";
-
-                MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", true, 1));
+                
+                FindFirstObjectByType<GameManager>().MiniGameSuccess();
             }
             else
                 timerText.text = "Time: " + (int)timer;
@@ -37,8 +37,8 @@ public class EnergyCoreManager : MonoBehaviour
         else if (failed)
         {
             timerText.text = "Failure!";
-
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", false));
+            
+            FindFirstObjectByType<GameManager>().MiniGameFailed();
         }
 
     }
@@ -63,8 +63,8 @@ public class EnergyCoreManager : MonoBehaviour
         else
         {
             timerText.text = "Success!";
-
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", true, 1));
+            
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
         }
     }
 

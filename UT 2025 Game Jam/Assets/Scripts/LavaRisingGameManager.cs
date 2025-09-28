@@ -32,7 +32,7 @@ public class LavaRisingGameManager : MonoBehaviour
         // checks if nodes are repaired
         if (CheckNodes())
         {
-           MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("LavaRising", true, 1));
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
             
             timerText.text = "Success!";
             lava.GetComponent<LavaController>().isGrow = false;
@@ -43,7 +43,7 @@ public class LavaRisingGameManager : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0 || !lava.GetComponent<LavaController>().isGrow)
             {
-                MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("LavaRising", false));
+                FindFirstObjectByType<GameManager>().MiniGameFailed();
                 
                 timerText.text = "Failure!";
                 lava.GetComponent<LavaController>().isGrow = false;

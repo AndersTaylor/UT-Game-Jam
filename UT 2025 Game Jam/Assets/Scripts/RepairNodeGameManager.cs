@@ -30,7 +30,7 @@ public class RepairNodeGameManager : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0)
         {
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("RepairNode", false));
+            FindFirstObjectByType<GameManager>().MiniGameFailed();
             
             timerText.text = "Failure!";
         }
@@ -42,7 +42,7 @@ public class RepairNodeGameManager : MonoBehaviour
         // checks if all nodes are activated
         if (CheckNodes())
         {
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("RepairNode", true, 1));
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
             
             timerText.text = "Success!";
         }
