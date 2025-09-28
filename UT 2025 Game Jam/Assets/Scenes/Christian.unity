@@ -276,10 +276,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 352b966835673124fb6dd6a5f1d92f63, type: 2}
   - {fileID: 11400000, guid: 6b437e3ac7c09d549864ba6fc962d151, type: 2}
   - {fileID: 11400000, guid: e6a16242fd8f5124e965948dabbc5c93, type: 2}
+  - {fileID: 11400000, guid: 5a4483e409c67ce45811d86bcb3be9d4, type: 2}
+  - {fileID: 11400000, guid: d7a8f490c8def5944aa86d49bb00f61e, type: 2}
   discardedGames: []
   selectedGameIndex: 0
   gamesPlayed: 0
-  gamesBeforeReset: 0
 --- !u!4 &921573496
 Transform:
   m_ObjectHideFlags: 0

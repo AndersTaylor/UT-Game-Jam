@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShapePusherGame
   m_EditorClassIdentifier: 
   miniGameName: ShapePusherGame
-  timeLimit: 0
+  timeLimit: 5

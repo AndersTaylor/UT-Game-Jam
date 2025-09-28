@@ -27,14 +27,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Games/Christian Puzzles/Temperature Regulation.unity
     guid: f3c3cc19dfb8a2b49bee6d83ffa53e95
   - enabled: 1
-    path: Assets/Scenes/LavaRisingGame.unity
+    path: Assets/Scenes/Games/LavaRisingGame.unity
     guid: cbdf6abfe2af02b44b598cf5391bc870
   - enabled: 1
-    path: Assets/Scenes/NodeRepairGame.unity
+    path: Assets/Scenes/Games/NodeRepairGame.unity
     guid: 0c458eba23c4bd24ab428d4b5ade4aa4
   - enabled: 1
-    path: Assets/Scenes/ShapePusherGame.unity
+    path: Assets/Scenes/Games/ShapePusherGame.unity
     guid: 04162d2cb7b1bd643bb311a6cab29a57
+  - enabled: 1
+    path: Assets/Scenes/Games/ShakeCanGame.unity
+    guid: dfa2633cf8d07624aae348e304c438ef
+  - enabled: 1
+    path: Assets/Scenes/Games/EnergyCoreBombGame.unity
+    guid: 08bc3b46a18ac4944beddf616b6d4333
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
