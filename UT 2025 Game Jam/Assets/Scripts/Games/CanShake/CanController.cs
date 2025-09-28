@@ -32,6 +32,7 @@ public class CanController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timePassed += Time.deltaTime;
         if (spill && !success)
         {
             shakeText.text = "You spilled!";

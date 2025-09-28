@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver.unity
     guid: 2fca54cbb239b3d4baa5382c3674296b
   - enabled: 1
+    path: Assets/Scenes/Score.unity
+    guid: fc17374d234c21b4e91568e66d444dbd
+  - enabled: 1
     path: Assets/Scenes/Games/Christian Puzzles/Reposition Hydroplanes.unity
     guid: ca6bd5d7453762e449642e111c156141
   - enabled: 1
