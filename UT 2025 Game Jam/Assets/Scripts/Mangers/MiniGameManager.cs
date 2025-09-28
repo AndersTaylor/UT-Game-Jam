@@ -83,6 +83,8 @@ public class MiniGameManager : MonoBehaviour
 
     public void StartNextMiniGame()
     {
+        MiniGameTimer.Instance.ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
+        
         if (miniGames.Count == 0)
         {
             repopulateMiniGames();
@@ -101,10 +103,6 @@ public class MiniGameManager : MonoBehaviour
         {
             discardedGames.Add(miniGames[selectedGameIndex]);
 
-            for (int i = 0; i < discardedGames.Count; i++)
-            {
-                Debug.Log(discardedGames[i]);
-            }
             miniGames.RemoveAt(selectedGameIndex);
         }
         else

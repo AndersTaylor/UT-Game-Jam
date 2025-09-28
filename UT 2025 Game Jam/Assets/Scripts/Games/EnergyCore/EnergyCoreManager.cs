@@ -72,15 +72,11 @@ public class EnergyCoreManager : MonoBehaviour
         else if (!success)
         {
             timerText.text = "Success!";
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/EnergyCore/EnergyCoreManager.cs
-
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", true, 1));
-=======
+            
             success = true;
             source.Stop();
             source.PlayOneShot(repaired);
-            FindFirstObjectByType<GameManager>().MiniGameSuccess();
->>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/EnergyCoreManager.cs
         }
     }
 

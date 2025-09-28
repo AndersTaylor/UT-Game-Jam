@@ -23,13 +23,9 @@ public class ShapePusherGameManager : MonoBehaviour
         // checks if all sensors are filled
         if (CheckSensors())
         {
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/ShapePush/ShapePusherGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Shape Pusher", true, 1));
             
-=======
->>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/ShapePusherGameManager.cs
             timerText.text = "Success!";
-            FindFirstObjectByType<GameManager>().MiniGameSuccess();
         }
         else
         {
@@ -40,13 +36,9 @@ public class ShapePusherGameManager : MonoBehaviour
         // fail state
         if (timer <= 0)
         {
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/ShapePush/ShapePusherGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Shape Pusher", false));
             
-=======
->>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/ShapePusherGameManager.cs
             timerText.text = "Failure!";
-            FindFirstObjectByType<GameManager>().MiniGameFailed();
         }
     }
 
