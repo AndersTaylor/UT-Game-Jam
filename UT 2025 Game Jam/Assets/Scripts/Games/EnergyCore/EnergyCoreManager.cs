@@ -32,7 +32,7 @@ public class EnergyCoreManager : MonoBehaviour
             {
                 timerText.text = "Success!";
 
-                MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", true, 1));
+                MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCoreBombGame", true, 1));
             }
             else
                 timerText.text = "Time: " + (int)timer;
@@ -41,7 +41,7 @@ public class EnergyCoreManager : MonoBehaviour
         {
             timerText.text = "Failure!";
 
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", false));
+            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCoreBombGame", false));
         }
 
     }
