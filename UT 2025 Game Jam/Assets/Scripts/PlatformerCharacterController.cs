@@ -8,11 +8,13 @@ public class PlatformerCharacterController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     Rigidbody2D rb;
+    Animator animator;
     bool isGrounded;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class PlatformerCharacterController : MonoBehaviour
     {
         // horizontal movemnet
         Vector2 move = new Vector2(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, rb.linearVelocityY);
+        animator.SetFloat("Direction", Input.GetAxisRaw("Horizontal"));
         rb.linearVelocity = move;
 
         // jumping 

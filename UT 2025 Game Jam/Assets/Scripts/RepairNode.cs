@@ -3,6 +3,7 @@ using UnityEngine;
 public class RepairNode : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite onSprite;
     public bool repaired;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +21,7 @@ public class RepairNode : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         // changes color once "fixed"
-        spriteRenderer.color = new Color(0, 255, 0);
+        spriteRenderer.sprite = onSprite;
         repaired = true;
     }
 }

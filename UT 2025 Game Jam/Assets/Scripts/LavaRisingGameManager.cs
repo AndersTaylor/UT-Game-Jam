@@ -49,7 +49,7 @@ public class LavaRisingGameManager : MonoBehaviour
                 timerText.text = "Time: " + (int)time;
                 // makes lava rise
                 if (lava.GetComponent<LavaController>().isGrow)
-                    lava.transform.localScale = new Vector3(11, risingCurve.Evaluate(time), 1);
+                    lava.transform.position = new Vector3(-0.2369f, risingCurve.Evaluate(time), 8.111722f);
             }
         }
     }

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2653153474914382363}
   - component: {fileID: 2489905927698952747}
   - component: {fileID: 7165385222174831674}
-  - component: {fileID: 230112132276903012}
   - component: {fileID: 4159056652756806997}
+  - component: {fileID: 511532173535618116}
+  - component: {fileID: 3134980171245459227}
   m_Layer: 0
   m_Name: PlatformerPlayer
   m_TagString: Untagged
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1589801730, guid: f8b58c5ac92856e4589cc6373f4434c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,8 +119,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &230112132276903012
-CapsuleCollider2D:
+--- !u!114 &4159056652756806997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225745298996285402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4987d6dacd4e17848bb2bf85af02ccb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 300
+  jumpForce: 15
+  groundCheck: {fileID: 6416902571390375250}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!61 &511532173535618116
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,27 +171,40 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.067572534}
-  m_Size: {x: 1, y: 1.7057594}
-  m_Direction: 0
---- !u!114 &4159056652756806997
-MonoBehaviour:
+  m_Offset: {x: -0.022112012, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.11, y: 1.08}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.0657761, y: 1.08}
+  m_EdgeRadius: 0
+--- !u!95 &3134980171245459227
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6225745298996285402}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4987d6dacd4e17848bb2bf85af02ccb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 250
-  jumpForce: 15
-  groundCheck: {fileID: 6416902571390375250}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 929a8c10a9ebc084bbe5cc92344a941d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8924975038780915425
 GameObject:
   m_ObjectHideFlags: 0

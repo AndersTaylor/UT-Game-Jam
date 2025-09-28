@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b4805ef4eecf41342981c3f94407f621
+guid: 73a0cbc9eac5b284e82421ff4af1f233
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,11 +43,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.4999999, y: 0.028241675}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -121,13 +121,57 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Spr_soda_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 334
+        height: 657
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909f1c5350bdea5488676b41213564a1
+      internalID: 751829834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spr_soda_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 375
+        height: 765
+      alignment: 9
+      pivot: {x: 0.5568426, y: 0.00006103989}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4eacdc98f1d144479bf7dc8afb8c150
+      internalID: -1465970602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: a3937d53ab0ebb742b79cc8fe1d3bb74
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +179,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spr_soda_0: 751829834
+      Spr_soda_1: 533735262
+      Spr_soda_2: -1465970602
+      Spr_soda_3: 1522394433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
