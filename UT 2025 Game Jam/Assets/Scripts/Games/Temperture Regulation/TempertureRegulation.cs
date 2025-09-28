@@ -18,8 +18,6 @@ public class TempertureRegulation : MonoBehaviour
     [SerializeField] float calibrationMin = 40f; // Minimum temperature for calibration
     [SerializeField] float calibrationMax = 60f; // Maximum temperature for calibration
     [SerializeField] float calibrationTime = 5f; // Time required to stay in range for calibration
-    [SerializeField] AudioSource source;
-    [SerializeField] AudioClip clip;
 
     private bool isCalibrating = false; // Flag to prevent multiple calibration checks
 
@@ -52,7 +50,6 @@ public class TempertureRegulation : MonoBehaviour
     {
         temperatureSlider.value += NormalizeTemperature(increaseRate);
         temperatureSlider.value = Mathf.Clamp(temperatureSlider.value, 0f, 1f); // Clamp to slider range
-        source.PlayOneShot(clip);
         //Debug.Log("Temperature increased: " + DenormalizeTemperature(temperatureSlider.value));
     }
 

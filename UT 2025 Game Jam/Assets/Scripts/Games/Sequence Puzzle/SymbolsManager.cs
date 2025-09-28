@@ -186,7 +186,7 @@ public class SymbolsManager : MonoBehaviour
         setFlag(true);
 
         Color originalColor = image.color;
-        image.color = Color.yellow;
+        image.color = Color.white;
         yield return new WaitForSeconds(0.5f);
         image.color = originalColor;
         yield return new WaitForSeconds(0.2f);
