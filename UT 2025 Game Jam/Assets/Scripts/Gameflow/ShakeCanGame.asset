@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShakeCanGame
   m_EditorClassIdentifier: 
   miniGameName: ShakeCanGame
-  timeLimit: 4
+  timeLimit: 5

@@ -36,6 +36,8 @@ public class MiniGameTimer : MonoBehaviour
     {
         totalTime = newTotalTime;
         timeRemaining = totalTime;
+        
+        Debug.Log("time remaining" + timeRemaining);
     }
 
     private void DecrementTimer()
@@ -49,7 +51,7 @@ public class MiniGameTimer : MonoBehaviour
 
         if (timeRemaining <= 0)
         {
-            shouldDecrementTimer = false;
+            ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Timer", false));
         }
     }

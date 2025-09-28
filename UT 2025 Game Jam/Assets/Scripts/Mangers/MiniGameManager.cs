@@ -97,7 +97,7 @@ public class MiniGameManager : MonoBehaviour
         LoadMiniGames(miniGameName);
         // The mini-game scene should call OnMiniGameComplete() when done
 
-        MiniGameTimer.Instance.ResetTimer(timeToCompleteGame());
+        //MiniGameTimer.Instance.ResetTimer(timeToCompleteGame());
     }
 
     public void OnMiniGameComplete()

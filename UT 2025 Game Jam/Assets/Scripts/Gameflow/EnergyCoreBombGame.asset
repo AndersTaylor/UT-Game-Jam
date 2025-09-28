@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EnergyCoreBombGame
   m_EditorClassIdentifier: 
   miniGameName: EnergyCoreBombGame
-  timeLimit: 3
+  timeLimit: 8

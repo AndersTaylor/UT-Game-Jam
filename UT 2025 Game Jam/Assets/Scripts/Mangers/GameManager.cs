@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     {
         if (result.success)
         {
+            MiniGameTimer.Instance.ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
             MiniGameManager.Instance.OnMiniGameComplete();
             Debug.Log( "Game Complete" + result.miniGameName + " Score Gained: " + result.scoreGained);
 
