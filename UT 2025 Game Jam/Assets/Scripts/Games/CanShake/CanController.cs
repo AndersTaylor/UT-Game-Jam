@@ -32,19 +32,19 @@ public class CanController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timePassed += Time.deltaTime;
-        if (spill && !success)
-        {
-            shakeText.text = "You spilled!";
-            timerText.text = "\"no more metal gear.\" - Hideo \"Game\" Kojima";
-            
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CanShake", success: false));
-        }
-        else if (success && !spill)
+        //timePassed += Time.deltaTime;
+        //if (spill && !success)
+        //{
+        //    shakeText.text = "You spilled!";
+        //    timerText.text = "\"no more metal gear.\" - Hideo \"Game\" Kojima";
+
+        //    MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CanShake", success: false));
+        //}
+        if (success)
         {
             shakeText.text = "Success!";
             timerText.text = "\"hideo game.\" - Hideo \"Game\" Kojima";
-            
+
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CanShake", true, 1));
         }
         else
@@ -56,38 +56,43 @@ public class CanController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(0f, 0f, angle+oscillate);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle + oscillate);
         oscillate *= -1;
     }
 
     private void OnMouseDown()
     {
-        if (clicked)
+        //if (clicked)
+        //{
+        //    if (timePassed - timeClicked < .1f && !spill && !success)
+        //    {
+        //        //numStrikes--;
+        //        //if (numStrikes <= 0)
+        //    }
+        //}
+        //clicked = true;
+        //timeClicked = timePassed;
+        if (!success)
         {
-            if (timePassed - timeClicked < .1f && !spill && !success)
-            {
-                //numStrikes--;
-                //if (numStrikes <= 0)
-                GameObject particle = Instantiate(sodaSpill, transform);
-                particle.transform.position += new Vector3(.25f, 3f, 0);
-                GetComponent<SpriteRenderer>().sprite = spillSprite;
-                PlayClip(sodaBomb);
-                GetComponent<AudioSource>().clip = fizz;
-                GetComponent<AudioSource>().Play(1);
-                spill = true;
-            }
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            transform.localScale += new Vector3(.02f, .02f, 0);
+            if (angle < 1f && angle > -1f)
+                angle *= -1.5f;
+            else
+                angle *= -1;
+            oscillate *= 1.1f;
+            numToShake--;
         }
-        clicked = true;
-        timeClicked = timePassed;
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
-        transform.localScale += new Vector3(.05f, .05f, 0);
-        angle *= -1.5f;
-        oscillate *= 1.1f;
-        numToShake--;
         if (numToShake <= 0 && !success && !spill)
         {
             success = true;
+            GameObject particle = Instantiate(sodaSpill, transform);
+            particle.transform.position += new Vector3(.25f, 3f, 0);
+            GetComponent<SpriteRenderer>().sprite = spillSprite;
+            //PlayClip(sodaBomb);
             PlayClip(sodaPop);
+            GetComponent<AudioSource>().clip = fizz;
+            GetComponent<AudioSource>().Play(1);
         }
     }
 
