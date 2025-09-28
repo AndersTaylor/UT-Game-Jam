@@ -5,8 +5,6 @@ using System.Collections;
 
 public class DraggableScript : MonoBehaviour
 {
-    [SerializeField] AudioSource source;
-    [SerializeField] AudioClip suck;
 
     private Vector3 screenPoint;
     private Vector3 offset;
@@ -26,11 +24,6 @@ public class DraggableScript : MonoBehaviour
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         transform.position = curPosition;
 
-    }
-
-    private void OnMouseUp()
-    {
-        source.PlayOneShot(suck);
     }
 
 }
