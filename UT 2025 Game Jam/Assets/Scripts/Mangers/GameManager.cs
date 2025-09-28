@@ -24,12 +24,17 @@ public class GameManager : MonoBehaviour
     public float timeRemaining;
     public int loopsCompleted;
     public GameObject clickParticles;
-    
+
 
     private void OnEnable()
     {
         MiniGameEventBus.OnMiniGameComplete += MiniGameCompleted;
         MiniGameEventBus.onLoopCompleted += CompleteLoop;
+    }
+    void OnDisable()
+    {
+        MiniGameEventBus.OnMiniGameComplete -= MiniGameCompleted;
+        MiniGameEventBus.onLoopCompleted -= CompleteLoop;
     }
 
     private void Update()
@@ -64,12 +69,14 @@ public class GameManager : MonoBehaviour
 
             if (result.scoreGained != 0)
             {
+                MiniGameTimer.Instance.shouldDecrementTimer = false;
                 ScoreManager.Instance.ChangeScore(result.scoreGained);
             }
         }
         else
         {
             MiniGameManager.Instance.OnMiniGameComplete();
+            ScoreManager.Instance.ChangeScore(0);
             
             if (shields > 0)
             {
@@ -95,9 +102,15 @@ public class GameManager : MonoBehaviour
         shields++;
     }
 
-    
+    private void LoopManager()
+    {
+        int gamesThisLoop = 3 * loopsCompleted;
+    }
+
     public void GameOver()
     {
         SceneManager.LoadScene("GameOver");
     }
+    
+    
 }

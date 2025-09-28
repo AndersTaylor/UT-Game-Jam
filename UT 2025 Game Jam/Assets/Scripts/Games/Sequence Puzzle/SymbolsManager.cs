@@ -130,10 +130,10 @@ public class SymbolsManager : MonoBehaviour
         Color greenOriginal = GreenImage.color;
         Color yellowOriginal = YellowImage.color;
 
-        RedImage.color = Color.white;
-        BlueImage.color = Color.white;
-        GreenImage.color = Color.white;
-        YellowImage.color = Color.white;
+        RedImage.color = Color.red;
+        BlueImage.color = Color.red;
+        GreenImage.color = Color.red;
+        YellowImage.color = Color.red;
 
         yield return new WaitForSeconds(1f);
 

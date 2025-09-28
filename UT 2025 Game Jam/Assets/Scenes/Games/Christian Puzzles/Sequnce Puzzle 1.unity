@@ -3003,7 +3003,7 @@ MonoBehaviour:
   BlueImage: {fileID: 312647720}
   GreenImage: {fileID: 798867314}
   YellowImage: {fileID: 2050737949}
-  GreenColor: {r: 0.26389736, g: 1, b: 0.25943398, a: 1}
+  GreenColor: {r: 1, g: 1, b: 1, a: 1}
   source: {fileID: 699809683}
   beep: {fileID: 8300000, guid: 349ddbc7ddbb9a64b93c14348ceff326, type: 3}
   click: {fileID: 8300000, guid: 444e84bb004cf0b4bb76c795101f2802, type: 3}
