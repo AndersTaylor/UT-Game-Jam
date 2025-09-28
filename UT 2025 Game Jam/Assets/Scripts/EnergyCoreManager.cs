@@ -26,12 +26,20 @@ public class EnergyCoreManager : MonoBehaviour
         if (!failed)
         {
             if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
+            {
                 timerText.text = "Success!";
+                
+                FindFirstObjectByType<GameManager>().MiniGameSuccess();
+            }
             else
                 timerText.text = "Time: " + (int)timer;
         }
         else if (failed)
+        {
             timerText.text = "Failure!";
+            
+            FindFirstObjectByType<GameManager>().MiniGameFailed();
+        }
 
     }
 
@@ -55,6 +63,8 @@ public class EnergyCoreManager : MonoBehaviour
         else
         {
             timerText.text = "Success!";
+            
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
         }
     }
 
