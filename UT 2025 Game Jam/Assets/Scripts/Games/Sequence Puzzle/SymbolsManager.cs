@@ -66,11 +66,8 @@ public class SymbolsManager : MonoBehaviour
         if (maxAttemptsReached)
         {
            // print("Max attempts reached. Sequence failed.");
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/Sequence Puzzle/SymbolsManager.cs
-=======
            
            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Sequence Puzzle", false));
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/Sequence Puzzle/SymbolsManager.cs
             return; // Exit if max attempts have been reached
         }
         if (repeatedSequence[currentSequenceIndex] == color)
@@ -83,10 +80,7 @@ public class SymbolsManager : MonoBehaviour
                 currentAttempts = 0; // Reset attempts on success
                 AttemptsText.text = $"Attempts: {currentAttempts} remaning"; // Update text on success
                
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/Sequence Puzzle/SymbolsManager.cs
-=======
                 MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Sequence Puzzle", true, 1));
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/Sequence Puzzle/SymbolsManager.cs
             }
         }
         else
@@ -99,14 +93,10 @@ public class SymbolsManager : MonoBehaviour
             {
               //  print("Max attempts reached. Sequence failed.");
                 AttemptsText.text =$"Reactor Restart Failed"; // Update text on failure
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/Sequence Puzzle/SymbolsManager.cs
-                maxAttemptsReached = true; 
-=======
                 maxAttemptsReached = true;
 
                MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Sequence Puzzle", false));
 
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/Sequence Puzzle/SymbolsManager.cs
                 StopAllCoroutines(); // Stop all ongoing flashes
                 
                 
