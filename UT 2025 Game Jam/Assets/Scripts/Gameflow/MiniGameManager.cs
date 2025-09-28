@@ -99,10 +99,6 @@ public class MiniGameManager : MonoBehaviour
         {
             discardedGames.Add(miniGames[selectedGameIndex]);
 
-            for (int i = 0; i < discardedGames.Count; i++)
-            {
-                Debug.Log(discardedGames[i]);
-            }
             miniGames.RemoveAt(selectedGameIndex);
         }
         else
@@ -110,7 +106,6 @@ public class MiniGameManager : MonoBehaviour
             Debug.LogWarning("selectedGameIndex out of range!");
         }
         gamesPlayed++;
-        Debug.Log($"discardedGames count: {discardedGames.Count}");
 
         if (gamesPlayed >= gamesBeforeReset)
         {
@@ -119,6 +114,7 @@ public class MiniGameManager : MonoBehaviour
             Debug.Log("Mini games list repopulated.");
         }
         
+        Debug.Log("Time to complete game: " + timeToCompleteGame());
         MiniGameTimer.Instance.ResetTimer(timeToCompleteGame());
         
         StartNextMiniGame();
