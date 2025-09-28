@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 5
-  numToShake: 5
+  numToShake: 20
   timer: 10
   timerText: {fileID: 1286427673}
   shakeText: {fileID: 1637396214}

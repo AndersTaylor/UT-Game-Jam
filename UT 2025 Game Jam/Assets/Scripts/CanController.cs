@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class CanController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class CanController : MonoBehaviour
     //int numStrikes = 3;
     bool clicked = false;
     bool spill = false;
+    float oscillate = 1f;
     void Start()
     {
         shakeText.text = "Shakes left: " + numToShake;
@@ -42,11 +44,17 @@ public class CanController : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        transform.rotation = Quaternion.Euler(0f, 0f, angle+oscillate);
+        oscillate *= -1;
+    }
+
     private void OnMouseDown()
     {
         if (clicked)
         {
-            if (timePassed - timeClicked < .2f)
+            if (timePassed - timeClicked < .1f)
             {
                 //numStrikes--;
                 //if (numStrikes <= 0)
@@ -56,7 +64,9 @@ public class CanController : MonoBehaviour
         clicked = true;
         timeClicked = timePassed;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        transform.localScale += new Vector3(.05f, .05f, 0);
         angle *= -1.5f;
+        oscillate *= 1.1f;
         numToShake--;
     }
 }
