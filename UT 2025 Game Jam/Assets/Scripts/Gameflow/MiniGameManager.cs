@@ -14,7 +14,7 @@ public class MiniGameManager : MonoBehaviour
     void Start()
     {
         randomizeMiniGames();
-        
+        LoadMiniGames();
     }
 
     // Update is called once per frame
