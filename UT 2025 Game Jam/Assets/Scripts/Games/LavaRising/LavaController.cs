@@ -4,6 +4,9 @@ using UnityEngine;
 public class LavaController : MonoBehaviour
 {
     public bool isGrow;
+    [SerializeField] AudioSource bgSound;
+    [SerializeField] AudioClip splash;
+    [SerializeField] GameObject effect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +20,8 @@ public class LavaController : MonoBehaviour
         if (player != null)
         {
             isGrow = false;
+            bgSound.PlayOneShot(splash);
+            Instantiate(effect, player.transform.position, player.transform.rotation);
            // Debug.Log("dead");
         }
     }
