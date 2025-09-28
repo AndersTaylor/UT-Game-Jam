@@ -1184,12 +1184,12 @@ MonoBehaviour:
   temperatureText: {fileID: 541741964}
   TimerText: {fileID: 197770752}
   minTemperature: 0
-  maxTemperature: 100
+  maxTemperature: 200
   decreaseRate: 5
   increaseRate: 10
-  decreaseDelay: 1
-  calibrationMin: 40
-  calibrationMax: 60
+  decreaseDelay: 0.2
+  calibrationMin: 140
+  calibrationMax: 180
   calibrationTime: 5
 --- !u!1 &1456811684
 GameObject:
