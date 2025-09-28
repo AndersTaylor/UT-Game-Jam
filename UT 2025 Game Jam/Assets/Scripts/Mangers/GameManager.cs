@@ -63,8 +63,9 @@ public class GameManager : MonoBehaviour
     {
         if (result.success)
         {
-            MiniGameTimer.Instance.ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
+
             MiniGameManager.Instance.OnMiniGameComplete();
+            MiniGameTimer.Instance.ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
             Debug.Log( "Game Complete" + result.miniGameName + " Score Gained: " + result.scoreGained);
 
             if (result.scoreGained != 0)
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
         else
         {
             MiniGameManager.Instance.OnMiniGameComplete();
+            MiniGameTimer.Instance.ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
             ScoreManager.Instance.ChangeScore(0);
             
             if (shields > 0)

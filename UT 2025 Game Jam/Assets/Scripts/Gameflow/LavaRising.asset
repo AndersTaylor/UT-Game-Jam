@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LavaRising
   m_EditorClassIdentifier: 
   miniGameName: LavaRisingGame
-  timeLimit: 10
+  timeLimit: 12

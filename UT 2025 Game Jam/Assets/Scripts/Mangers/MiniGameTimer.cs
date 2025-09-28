@@ -51,7 +51,7 @@ public class MiniGameTimer : MonoBehaviour
 
         if (timeRemaining <= 0)
         {
-            ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
+            //ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
             
             shouldDecrementTimer = false;
             
