@@ -9,16 +9,15 @@ public class ScoreManager : MonoBehaviour
      // Set Singleton
     public static ScoreManager Instance { get; private set; }
    
-    private static ScoreManager instance;
     private void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             Destroy(gameObject);
         }
         else
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }

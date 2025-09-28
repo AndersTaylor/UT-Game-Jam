@@ -16,12 +16,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
-
-    [Header("Events")] 
-    public GameEvent onLoopCompleted;
-    public GameEvent onLifeLost;
-    public GameEvent onShieldLost; 
-    public GameEvent onGameOver;
     
     [Header("Other")]
     
@@ -31,20 +25,10 @@ public class GameManager : MonoBehaviour
     public int loopsCompleted;
     public GameObject clickParticles;
     
-    private AudioSource click;
-    private ScoreManager scoreManager;
-    private void Initialize()
-    {
-        if (scoreManager == null)
-        {
-            scoreManager = FindFirstObjectByType<ScoreManager>();
-            click = GetComponent<AudioSource>();
-        }
-    }
 
     private void OnEnable()
     {
-        MiniGameEventBus.OnMiniGameComplete += MiniGameSuccess;
+        MiniGameEventBus.OnMiniGameComplete += MiniGameCompleted;
         MiniGameEventBus.onLoopCompleted += CompleteLoop;
     }
 
@@ -58,36 +42,34 @@ public class GameManager : MonoBehaviour
 
     private void ClickJuice()
     {
-        click.Play();
-        click.pitch = Random.Range(1.3f, 2f);
+        //click.Play();
+        //click.pitch = Random.Range(1.3f, 2f);
     }
 
     public void CompleteLoop()
     {
-        int scoreToAdd = Mathf.RoundToInt(timeRemaining * scoreManager.totalMult);
-        scoreManager.ChangeScore(scoreToAdd);
+        int scoreToAdd = Mathf.RoundToInt(timeRemaining * ScoreManager.Instance.totalMult);
+        ScoreManager.Instance.ChangeScore(scoreToAdd);
         loopsCompleted++;
         
-        onLoopCompleted.Raise(this, null);
     }
 
-    public void MiniGameSuccess(MiniGameEventBus.Result result)
+    public void MiniGameCompleted(MiniGameEventBus.Result result)
     {
         if (result.success)
         {
             MiniGameManager.Instance.OnMiniGameComplete();
-            scoreManager.ChangeScore(result.scoreGained);
             Debug.Log( "Game Complete" + result.miniGameName + " Score Gained: " + result.scoreGained);
 
             if (result.scoreGained != 0)
             {
-                scoreManager.ChangeScore(result.scoreGained);
+                ScoreManager.Instance.ChangeScore(result.scoreGained);
             }
         }
-        
-        lives--;        
-        if (lives <= 0)
+        else
         {
+            MiniGameManager.Instance.OnMiniGameComplete();
+            
             if (shields > 0)
             {
                 shields--;
@@ -101,17 +83,13 @@ public class GameManager : MonoBehaviour
                 if (lives <= 0)
                 {
                     GameOver();
-                    return;
                 }
             }
-
-            MiniGameManager.Instance.OnMiniGameComplete();
         }
     }
     
     public void GameOver()
     {
-        onGameOver.Raise(this, null);
         SceneManager.LoadScene("GameOver");
     }
 }

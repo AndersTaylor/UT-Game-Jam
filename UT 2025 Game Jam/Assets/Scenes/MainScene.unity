@@ -609,7 +609,6 @@ GameObject:
   - component: {fileID: 1213262240}
   - component: {fileID: 1213262243}
   - component: {fileID: 1213262241}
-  - component: {fileID: 1213262242}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -645,6 +644,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc1483d4f021164d8b3c5b08be483e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onLoopCompleted: {fileID: 0}
+  onLifeLost: {fileID: 0}
+  onShieldLost: {fileID: 0}
+  onGameOver: {fileID: 0}
   lives: 3
   shields: 3
   timeRemaining: 45
@@ -785,34 +788,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1213262242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213262235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963024a93a63d5b4998a97132f055886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 3f914e6ea9b809c4c96f7dcd1b0300a0, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1213262239}
-        m_TargetAssemblyTypeName: MiniGameManager, Assembly-CSharp
-        m_MethodName: OnMiniGameComplete
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1213262243
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,13 +30,9 @@ public class RepairNodeGameManager : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0 && !CheckNodes())
         {
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/RepairNode/RepairNodeGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("RepairNode", false));
             
-=======
->>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/RepairNodeGameManager.cs
             timerText.text = "Failure!";
-            FindFirstObjectByType<GameManager>().MiniGameFailed();
         }
         else
         {
@@ -46,13 +42,9 @@ public class RepairNodeGameManager : MonoBehaviour
         // checks if all nodes are activated
         if (CheckNodes())
         {
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/RepairNode/RepairNodeGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("RepairNode", true, 1));
             
-=======
->>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/RepairNodeGameManager.cs
             timerText.text = "Success!";
-            FindFirstObjectByType<GameManager>().MiniGameSuccess();
         }
     }
 
