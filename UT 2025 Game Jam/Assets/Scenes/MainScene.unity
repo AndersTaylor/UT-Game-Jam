@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &272818772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Chrono Stabilization: 0'
+  m_text: 'Chrono Stabilization: 3'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 820a6f7756af7194580c6a0e21f55b16, type: 2}
   m_sharedMaterial: {fileID: -5953268902723562881, guid: 820a6f7756af7194580c6a0e21f55b16, type: 2}
@@ -1067,7 +1067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1382760216
 RectTransform:
   m_ObjectHideFlags: 0

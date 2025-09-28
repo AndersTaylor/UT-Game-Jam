@@ -63,7 +63,6 @@ public class ScoreManager : MonoBehaviour
         shouldIncrementScore = true;
         
         scoreText.gameObject.SetActive(true);
-        multText.gameObject.SetActive(true);
     }
 
     private void IncrementScore()
@@ -123,7 +122,6 @@ public class ScoreManager : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         scoreText.gameObject.SetActive(false);
-        multText.gameObject.SetActive(false);
 
         MiniGameTimer.Instance.shouldDecrementTimer = true;
         MiniGameManager.Instance.StartNextMiniGame();

@@ -64,14 +64,12 @@ public class GameManager : MonoBehaviour
 
             if (result.scoreGained != 0)
             {
-                MiniGameTimer.Instance.shouldDecrementTimer = false;
                 ScoreManager.Instance.ChangeScore(result.scoreGained);
             }
         }
         else
         {
             MiniGameManager.Instance.OnMiniGameComplete();
-            ScoreManager.Instance.ChangeScore(0);
             
             if (shields > 0)
             {
@@ -97,10 +95,6 @@ public class GameManager : MonoBehaviour
         shields++;
     }
 
-    private void LoopManager()
-    {
-        int gamesThisLoop = 3 * loopsCompleted;
-    }
     
     public void GameOver()
     {
