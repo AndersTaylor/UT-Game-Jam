@@ -6,8 +6,8 @@ public class GameOverButton : MonoBehaviour
 {
     public void Awake()
     {
-        Destroy(FindFirstObjectByType<GameManager>().gameObject);
-        Destroy(FindFirstObjectByType<AudioManager>().gameObject);
+       Destroy(FindFirstObjectByType<GameManager>().gameObject);
+       Destroy(FindFirstObjectByType<AudioManager>().gameObject);
     }
 
     public void LoadGame()
