@@ -32,14 +32,10 @@ public class LavaRisingGameManager : MonoBehaviour
         // checks if nodes are repaired
         if (CheckNodes())
         {
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/LavaRising/LavaRisingGameManager.cs
            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("LavaRising", true, 1));
             
-=======
->>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/LavaRisingGameManager.cs
             timerText.text = "Success!";
             lava.GetComponent<LavaController>().isGrow = false;
-            FindFirstObjectByType<GameManager>().MiniGameSuccess();
         }
         else
         {
@@ -47,14 +43,10 @@ public class LavaRisingGameManager : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0 || !lava.GetComponent<LavaController>().isGrow)
             {
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/LavaRising/LavaRisingGameManager.cs
                 MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("LavaRising", false));
                 
-=======
->>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/LavaRisingGameManager.cs
                 timerText.text = "Failure!";
                 lava.GetComponent<LavaController>().isGrow = false;
-                FindFirstObjectByType<GameManager>().MiniGameFailed();
             }
             else
             {
