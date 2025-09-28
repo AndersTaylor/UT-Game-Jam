@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static ScoreManager Instance { get; private set; }
     // Set Singleton
     private static ScoreManager instance;
     private void Awake()
@@ -87,10 +88,20 @@ public class ScoreManager : MonoBehaviour
         if (streak < 3)
             multiplier = 1f;
         else
-            multiplier = math.min(5f, 2f + 0.25f * (streak - 3));
+            multiplier = math.min(5f, 2f + 0.5f * (streak - 3));
+        
+        if(multiplier == 2f || multiplier == 3f || multiplier == 4f || multiplier == 5f)
+        {
+            GameManager.Instance.addShield();
+
+            //play sound
+            audioSource.pitch = Random.Range(0.7f, 1.2f);
+            audioSource.Play();
+        }
 
         int gained = (int)Math.Round(basePoints * multiplier);
         ChangeMult(gained);
+        
     }
 
     void OnMultiplierLost()

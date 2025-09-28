@@ -17,15 +17,15 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    
+
     [Header("Other")]
-    
+
     public int lives = 3;
     public int shields;
     public float timeRemaining;
     public int loopsCompleted;
     public GameObject clickParticles;
-    
+
     private AudioSource click;
     private ScoreManager scoreManager;
     private void Start()
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         scoreManager.ChangeScore(scoreToAdd);
         loopsCompleted++;
     }
-    
+
     public void MiniGameFailed()
     {
         if (shields > 0)
@@ -68,24 +68,36 @@ public class GameManager : MonoBehaviour
         {
             lives--;
             Debug.Log("lives: " + lives);
-        
+
             if (lives <= 0)
             {
                 GameOver();
             }
         }
-        
+
         MiniGameManager.Instance.OnMiniGameComplete();
     }
 
     public void MiniGameSuccess()
     {
-        
+
         MiniGameManager.Instance.OnMiniGameComplete();
+        scoreManager.addMiniGameWonMultiplier();
     }
-    
+
     public void GameOver()
     {
         SceneManager.LoadScene("GameOver");
+    }
+
+    public void addShield()
+    {
+        shields++;
+    }
+
+    public void removeShield()
+    {
+        if (shields > 0)
+            shields--;
     }
 }
