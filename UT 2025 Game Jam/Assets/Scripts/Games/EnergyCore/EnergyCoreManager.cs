@@ -26,7 +26,6 @@ public class EnergyCoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
         if (!failed)
         {
             if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
@@ -58,7 +57,8 @@ public class EnergyCoreManager : MonoBehaviour
                                                 sparkSpeed);
                 spark.GetComponent<Rigidbody2D>().MovePosition(p);
             }
-            else if (((cur + 1) % path.Length == 0 || timer <= 0) && !failed)
+            // pass in the game timer into the spark animation
+            else if (((cur + 1) % path.Length == 0 ) && !failed)
             {
                 failed = true;
                 GameObject core = GameObject.FindGameObjectWithTag("Finish");
@@ -72,7 +72,6 @@ public class EnergyCoreManager : MonoBehaviour
         else if (!success)
         {
             timerText.text = "Success!";
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", true, 1));
             
             success = true;
             source.Stop();

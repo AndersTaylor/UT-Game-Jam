@@ -83,18 +83,21 @@ public class MiniGameManager : MonoBehaviour
 
     public void StartNextMiniGame()
     {
-        MiniGameTimer.Instance.ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
-        
+
+
         if (miniGames.Count == 0)
         {
             repopulateMiniGames();
             gamesPlayed = 0;
             //Debug.Log("Mini games list repopulated.");
         }
-
+        
+       
         string miniGameName = randomizeMiniGames();
         LoadMiniGames(miniGameName);
         // The mini-game scene should call OnMiniGameComplete() when done
+
+        MiniGameTimer.Instance.ResetTimer(timeToCompleteGame());
     }
 
     public void OnMiniGameComplete()

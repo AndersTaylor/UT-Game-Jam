@@ -26,19 +26,7 @@ public class RepairNodeGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // counts down timer, has fail state
-        time -= Time.deltaTime;
-        if (time <= 0 && !CheckNodes())
-        {
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("RepairNode", false));
-            
-            timerText.text = "Failure!";
-        }
-        else
-        {
-            timerText.text = "Time: " + (int)time;
-        }
-
+        
         // checks if all nodes are activated
         if (CheckNodes())
         {

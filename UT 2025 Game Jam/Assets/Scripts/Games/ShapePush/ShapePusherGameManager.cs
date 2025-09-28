@@ -27,19 +27,7 @@ public class ShapePusherGameManager : MonoBehaviour
             
             timerText.text = "Success!";
         }
-        else
-        {
-            // timer countds down
-            timer -= Time.deltaTime;
-            timerText.text = "Time: " + ((int)timer).ToString();
-        }
-        // fail state
-        if (timer <= 0)
-        {
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Shape Pusher", false));
-            
-            timerText.text = "Failure!";
-        }
+       
     }
 
     bool CheckSensors()

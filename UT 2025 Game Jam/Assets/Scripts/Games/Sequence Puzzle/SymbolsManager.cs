@@ -95,7 +95,6 @@ public class SymbolsManager : MonoBehaviour
                 AttemptsText.text =$"Reactor Restart Failed"; // Update text on failure
                 maxAttemptsReached = true;
 
-               MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Sequence Puzzle", false));
 
                 StopAllCoroutines(); // Stop all ongoing flashes
                 

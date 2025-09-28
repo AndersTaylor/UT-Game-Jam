@@ -32,17 +32,7 @@ public class CanController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        timerText.text = "Time: " + (int)timer;
-        timePassed += Time.deltaTime;
-        if (timer <= 0 && !success && !spill)
-        {
-            timerText.text = "you disappoint me. - Hideo Kojima";
-            shakeText.text = "Failure!";
-            
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CanShake", success: false));
-        }
-        else if (spill && !success)
+        if (spill && !success)
         {
             shakeText.text = "You spilled!";
             timerText.text = "\"no more metal gear.\" - Hideo \"Game\" Kojima";
