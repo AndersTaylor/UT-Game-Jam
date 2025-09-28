@@ -13,7 +13,6 @@ public class UwUManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         playingUwU = uwus[Random.Range(0, uwus.Length)];
-        SetAndPlay();
     }
 
     public void SetAndPlay()
