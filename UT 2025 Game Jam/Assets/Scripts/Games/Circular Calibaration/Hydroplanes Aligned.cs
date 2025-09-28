@@ -4,7 +4,7 @@ using TMPro;
 public class HydroplanesAligned : MonoBehaviour
 {
     [SerializeField] private GameObject[] circularCalibrator; // Array of hydroplane scripts
-    public int attemptsRemaining; // Number of attempts remaining
+   // public int attemptsRemaining; // Number of attempts remaining
     //public TMP_Text AttemptsText; // Reference to the TextMeshProUGUI component to display attempts
     [SerializeField] AudioSource source;
     //[SerializeField] private Room roomToLoadAfterCompletion; // Reference to the room to load after completion
@@ -39,6 +39,7 @@ public class HydroplanesAligned : MonoBehaviour
         {
             source.Stop();
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CircularCalibration", true, 1));
+            Debug.Log("All indicators are aligned!");
         }
 
 

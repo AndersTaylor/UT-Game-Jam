@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc1483d4f021164d8b3c5b08be483e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
+  lives: 6
   shields: 0
   timeRemaining: 45
   loopsCompleted: 0

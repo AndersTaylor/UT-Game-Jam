@@ -74,14 +74,15 @@ public class RepositionHydroplanes : MonoBehaviour
         {
             
            // Debug.Log("Indicator is not aligned with the triangle!");
-            hydroplanesAlignedScript.attemptsRemaining--;
+           // hydroplanesAlignedScript.attemptsRemaining--;
            // hydroplanesAlignedScript.AttemptsText.text = $"Incorrect alignment. Attempts remaining: {hydroplanesAlignedScript.attemptsRemaining}";
-            if (hydroplanesAlignedScript.attemptsRemaining <= 0)
+            /*if (hydroplanesAlignedScript.attemptsRemaining <= 0)
             {
                // hydroplanesAlignedScript.AttemptsText.text = "No attempts remaining!";
                 hydroplanesAlignedScript.stopAllRotations();
                 
             } 
+            */
           
             StartCoroutine(WaitAndRestartRotation(1f));
         }
