@@ -3,14 +3,25 @@ using UnityEngine;
 
 public class MiniGameTimer : MonoBehaviour
 {
+    public static MiniGameTimer Instance { get; private set; }
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+    
     public GameObject timerObject;
 
     public float totalTime;
     public bool shouldDecrementTimer = true;
-    
-    private float timeRemaining;
+    public float timeRemaining;
 
-    private void Start()
+    private void Start() 
     {
         timeRemaining = totalTime;
     }

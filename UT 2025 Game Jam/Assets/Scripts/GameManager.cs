@@ -5,20 +5,16 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
-    // Set Singleton
-    private static GameManager instance;
-    private void Awake()
+    public static GameManager Instance { get; private set; }
+    void Awake()
     {
-        if (instance != null)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
-        else
-        {
-            instance = this;
-            Initialize();
-            DontDestroyOnLoad(gameObject);
-        }
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     [Header("Events")] 
@@ -69,7 +65,6 @@ public class GameManager : MonoBehaviour
         onLoopCompleted.Raise(this, null);
     }
     
-    // Called when game manager hears MiniGameFailed event raised
     public void MiniGameFailed()
     {
         if (shields > 0)
@@ -88,6 +83,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void MiniGameSuccess()
+    {
+        
+    }
+    
     public void GameOver()
     {
         onGameOver.Raise(this, null);

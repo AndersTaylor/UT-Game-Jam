@@ -37,12 +37,6 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        // test input
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            ChangeScore(30);
-        }
-
         if (shouldIncrementScore)
         {
             IncrementScore();
@@ -54,6 +48,8 @@ public class ScoreManager : MonoBehaviour
         tempScore = totalScore;
         totalScore += scoreToAdd;
         shouldIncrementScore = true;
+        
+        scoreText.gameObject.SetActive(true);
     }
 
     private void IncrementScore()
@@ -61,7 +57,7 @@ public class ScoreManager : MonoBehaviour
         if (tempScore < totalScore)
         {
             tempScore++;
-            scoreText.text = tempScore.ToString();
+            scoreText.text = "Chrono Stabilization: " + tempScore;
 
             audioSource.pitch = Random.Range(1f, 1.5f);
             audioSource.Play();
@@ -70,6 +66,7 @@ public class ScoreManager : MonoBehaviour
         else
         {
             shouldIncrementScore = false;
+            scoreText.gameObject.SetActive(false);
         }
     }
 

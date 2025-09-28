@@ -10,12 +10,6 @@ public class LavaController : MonoBehaviour
         isGrow = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         // checks if player falls in lava
