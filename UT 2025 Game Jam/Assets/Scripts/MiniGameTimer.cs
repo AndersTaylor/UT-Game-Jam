@@ -51,8 +51,8 @@ public class MiniGameTimer : MonoBehaviour
 
         if (timeRemaining <= 0)
         {
-            GameManager.Instance.MiniGameFailed();
             shouldDecrementTimer = false;
+            GameManager.Instance.MiniGameFailed();
         }
     }
 }
