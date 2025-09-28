@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -26,7 +27,12 @@ public class ScoreManager : MonoBehaviour
     public TMP_Text multText;
     public int totalScore = 0;
     public float totalMult = 1f;
+
+    [SerializeField] private int streak = 0;
+    [SerializeField] private float multiplier = 1f;
+    [SerializeField] private float basepoint = 1f;
     
+
     private AudioSource audioSource;
     private bool shouldIncrementScore;
     private int tempScore;
@@ -48,6 +54,9 @@ public class ScoreManager : MonoBehaviour
     {
         tempScore = totalScore;
         totalScore += scoreToAdd;
+        Debug.Log("Score: " + totalScore);
+        addMiniGameWinMultiplier();
+        Debug.Log("Multiplier: " + multiplier + " Streak: " + streak);
         shouldIncrementScore = true;
         
         scoreText.gameObject.SetActive(true);
@@ -62,7 +71,7 @@ public class ScoreManager : MonoBehaviour
 
             audioSource.pitch = Random.Range(1f, 1.5f);
             audioSource.Play();
-            
+
         }
         else
         {
@@ -70,6 +79,35 @@ public class ScoreManager : MonoBehaviour
             scoreText.gameObject.SetActive(false);
         }
     }
+
+    public void addMiniGameWinMultiplier()
+    {
+
+        streak++;
+        if (streak >= 3)
+            multiplier = 1f;
+        else
+            multiplier = math.min(5f, 2f + 0.5f * (streak - 3));
+
+        if (multiplier == 2f || multiplier == 3f || multiplier == 4f || multiplier == 5f)
+            GameManager.Instance.addShield();
+
+        int MultGained = Mathf.RoundToInt(basepoint * multiplier);
+        ChangeMult(MultGained);
+    }
+    
+    public void onMultiplierLost()
+    {
+        streak = 0;
+        multiplier = 1f;
+        ChangeMult(-totalMult + 1f); 
+    }
+    
+    public void addMult(float multToAdd)
+    {
+        totalMult += multToAdd;
+        multText.text = totalMult.ToString();
+    } 
 
     public void ChangeMult(float multToAdd)
     {
