@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CookingMama
   m_EditorClassIdentifier: 
   miniGameName: Temperature Regulation
-  timeLimit: 5
+  timeLimit: 8
