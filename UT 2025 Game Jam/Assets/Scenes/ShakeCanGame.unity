@@ -155,6 +155,7 @@ MonoBehaviour:
   timer: 10
   timerText: {fileID: 1286427673}
   shakeText: {fileID: 1637396214}
+  sodaSpill: {fileID: 1287168191266210572, guid: 1ed67f12e40efc44da951df61ab4ee1d, type: 3}
 --- !u!61 &978270762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -244,7 +245,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 72e0dc650dbbd6b4490b763858523880, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

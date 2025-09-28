@@ -11,6 +11,7 @@ public class CanController : MonoBehaviour
     [SerializeField] float timer = 10f;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI shakeText;
+    [SerializeField] GameObject sodaSpill;
 
     float timeClicked = 0f;
     float timePassed = 0f;
@@ -58,6 +59,8 @@ public class CanController : MonoBehaviour
             {
                 //numStrikes--;
                 //if (numStrikes <= 0)
+                    GameObject particle = Instantiate(sodaSpill, transform);
+                    particle.transform.position += new Vector3(.25f, 3f, 0);
                     spill = true;
             }
         }
