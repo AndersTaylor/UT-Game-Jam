@@ -103,14 +103,9 @@ public class TempertureRegulation : MonoBehaviour
         TimerText.text = "Temperature calibrated!";
        // Debug.Log("Temperature successfully calibrated!");
         StopAllCoroutines(); // Stop the temperature decrease coroutine
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/Temperture Regulation/TempertureRegulation.cs
-       
-        
-=======
 
 
         MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Temperature Regulation", true, 1));
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/Temperture Regulation/TempertureRegulation.cs
     }
 
     private float NormalizeTemperature(float temperature)

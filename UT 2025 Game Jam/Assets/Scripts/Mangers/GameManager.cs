@@ -70,21 +70,11 @@ public class GameManager : MonoBehaviour
         
         onLoopCompleted.Raise(this, null);
     }
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/GameManager.cs
-    
-    public void MiniGameFailed()
-=======
 
     public void MiniGameSuccess(MiniGameEventBus.Result result)
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/GameManager.cs
     {
         if (result.success)
         {
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/GameManager.cs
-            shields--;
-            onShieldLost.Raise(this, shields);
-            return;
-=======
             MiniGameManager.Instance.OnMiniGameComplete();
             scoreManager.ChangeScore(result.scoreGained);
             Debug.Log( "Game Complete" + result.miniGameName + " Score Gained: " + result.scoreGained);
@@ -93,23 +83,11 @@ public class GameManager : MonoBehaviour
             {
                 scoreManager.ChangeScore(result.scoreGained);
             }
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/GameManager.cs
         }
         
-        lives--;
-        onLifeLost.Raise(this, lives);
-        
+        lives--;        
         if (lives <= 0)
         {
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/GameManager.cs
-            GameOver();
-        }
-    }
-
-    public void MiniGameSuccess()
-    {
-        
-=======
             if (shields > 0)
             {
                 shields--;
@@ -129,7 +107,6 @@ public class GameManager : MonoBehaviour
 
             MiniGameManager.Instance.OnMiniGameComplete();
         }
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/GameManager.cs
     }
     
     public void GameOver()
