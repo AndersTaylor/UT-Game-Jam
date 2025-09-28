@@ -23,9 +23,8 @@ public class ShapePusherGameManager : MonoBehaviour
         // checks if all sensors are filled
         if (CheckSensors())
         {
-            FindFirstObjectByType<GameManager>().MiniGameSuccess();
-            
             timerText.text = "Success!";
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
         }
         else
         {
@@ -36,9 +35,8 @@ public class ShapePusherGameManager : MonoBehaviour
         // fail state
         if (timer <= 0)
         {
-            FindFirstObjectByType<GameManager>().MiniGameFailed();
-            
             timerText.text = "Failure!";
+            FindFirstObjectByType<GameManager>().MiniGameFailed();
         }
     }
 

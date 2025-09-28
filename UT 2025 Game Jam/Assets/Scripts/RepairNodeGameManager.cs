@@ -28,11 +28,10 @@ public class RepairNodeGameManager : MonoBehaviour
     {
         // counts down timer, has fail state
         time -= Time.deltaTime;
-        if (time <= 0)
+        if (time <= 0 && !CheckNodes())
         {
-            FindFirstObjectByType<GameManager>().MiniGameFailed();
-            
             timerText.text = "Failure!";
+            FindFirstObjectByType<GameManager>().MiniGameFailed();
         }
         else
         {
@@ -42,9 +41,8 @@ public class RepairNodeGameManager : MonoBehaviour
         // checks if all nodes are activated
         if (CheckNodes())
         {
-            FindFirstObjectByType<GameManager>().MiniGameSuccess();
-            
             timerText.text = "Success!";
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
         }
     }
 
