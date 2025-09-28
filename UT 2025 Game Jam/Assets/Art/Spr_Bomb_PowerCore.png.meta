@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 73a0cbc9eac5b284e82421ff4af1f233
+guid: 4b52ac36b2bdb844b91212dcd1f31fe2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,45 +123,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spr_soda_0
+      name: Spr_Bomb_PowerCore_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 0
-        width: 334
-        height: 657
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 449
+        width: 887
+        height: 431
+      alignment: 9
+      pivot: {x: 0.98924464, y: 0.8503064}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 909f1c5350bdea5488676b41213564a1
-      internalID: 751829834
+      spriteID: 7f1b692e21e3d0846abb6563bdb95b1c
+      internalID: 1433404252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spr_soda_2
+      name: Spr_Bomb_PowerCore_1
       rect:
         serializedVersion: 2
-        x: 395
-        y: 0
-        width: 375
-        height: 765
+        x: 32
+        y: 13
+        width: 855
+        height: 396
       alignment: 9
-      pivot: {x: 0.59876543, y: 0.4354473}
+      pivot: {x: 0.9889559, y: 0.8291866}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4eacdc98f1d144479bf7dc8afb8c150
-      internalID: -1465970602
+      spriteID: 65f22a53bf907b2458368fe6c8d44563
+      internalID: -1792371816
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a3937d53ab0ebb742b79cc8fe1d3bb74
+    spriteID: feeb0b05c71b39a49b813643f21fe583
     internalID: 0
     vertices: []
     indices: 
@@ -180,10 +180,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spr_soda_0: 751829834
-      Spr_soda_1: 533735262
-      Spr_soda_2: -1465970602
-      Spr_soda_3: 1522394433
+      Spr_Bomb_PowerCore_0: 1433404252
+      Spr_Bomb_PowerCore_1: -1792371816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

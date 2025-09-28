@@ -11,12 +11,18 @@ public class CanController : MonoBehaviour
     [SerializeField] float timer = 10f;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI shakeText;
+    [SerializeField] GameObject sodaSpill;
+    [SerializeField] Sprite spillSprite;
+    [SerializeField] AudioClip sodaPop;
+    [SerializeField] AudioClip sodaBomb;
+    [SerializeField] AudioClip fizz;
 
     float timeClicked = 0f;
     float timePassed = 0f;
     //int numStrikes = 3;
     bool clicked = false;
     bool spill = false;
+    bool success = false;
     float oscillate = 1f;
     void Start()
     {
@@ -29,13 +35,20 @@ public class CanController : MonoBehaviour
         timer -= Time.deltaTime;
         timerText.text = "Time: " + (int)timer;
         timePassed += Time.deltaTime;
-        if (spill && numToShake > 0)
+        if (timer <= 0 && !success && !spill)
+        {
+            timerText.text = "you disappoint me. - Hideo Kojima";
+            shakeText.text = "Failure!";
+        }
+        else if (spill && !success)
         {
             shakeText.text = "You spilled!";
+            timerText.text = "\"no more metal gear.\" - Hideo \"Game\" Kojima";
         }
-        else if (numToShake <= 0 && !spill)
+        else if (success && !spill)
         {
             shakeText.text = "Success!";
+            timerText.text = "\"hideo game.\" - Hideo \"Game\" Kojima";
         }
         else
         {
@@ -54,11 +67,17 @@ public class CanController : MonoBehaviour
     {
         if (clicked)
         {
-            if (timePassed - timeClicked < .1f)
+            if (timePassed - timeClicked < .1f && !spill)
             {
                 //numStrikes--;
                 //if (numStrikes <= 0)
-                    spill = true;
+                GameObject particle = Instantiate(sodaSpill, transform);
+                particle.transform.position += new Vector3(.25f, 3f, 0);
+                GetComponent<SpriteRenderer>().sprite = spillSprite;
+                PlayClip(sodaBomb);
+                GetComponent<AudioSource>().clip = fizz;
+                GetComponent<AudioSource>().Play(1);
+                spill = true;
             }
         }
         clicked = true;
@@ -68,5 +87,15 @@ public class CanController : MonoBehaviour
         angle *= -1.5f;
         oscillate *= 1.1f;
         numToShake--;
+        if (numToShake <= 0 && !success)
+        {
+            success = true;
+            PlayClip(sodaPop);
+        }
+    }
+
+    void PlayClip(AudioClip clip)
+    {
+        GetComponent<AudioSource>().PlayOneShot(clip);
     }
 }
