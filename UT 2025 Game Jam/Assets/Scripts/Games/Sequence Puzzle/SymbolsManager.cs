@@ -75,7 +75,7 @@ public class SymbolsManager : MonoBehaviour
             currentSequenceIndex++;
             if (currentSequenceIndex >= repeatedSequence.Length)
             {
-              //  print("Sequence completed successfully!");
+                print("Sequence completed successfully!");
                 currentSequenceIndex = 0;
                 currentAttempts = 0; // Reset attempts on success
                 AttemptsText.text = $"Attempts: {currentAttempts} remaning"; // Update text on success
