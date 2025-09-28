@@ -6,7 +6,7 @@ public class PlatformerCharacterController : MonoBehaviour
     [SerializeField] float jumpForce = 10f;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
-
+    [SerializeField] AudioClip jumpSound;
     Rigidbody2D rb;
     Animator animator;
     bool isGrounded;
@@ -34,6 +34,7 @@ public class PlatformerCharacterController : MonoBehaviour
         // jumping 
         if (Input.GetAxisRaw("Jump") > 0 && isGrounded)
         {
+            GetComponent<AudioSource>().PlayOneShot(jumpSound);
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
     }
