@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -24,6 +25,9 @@ public class GameManager : MonoBehaviour
     public float timeRemaining;
     public int loopsCompleted;
     public GameObject clickParticles;
+
+    public TMP_Text livesText;
+    public TMP_Text shieldText;
 
 
     private void OnEnable()
@@ -81,10 +85,14 @@ public class GameManager : MonoBehaviour
             if (shields > 0)
             {
                 shields--;
+                shieldText.text = shields.ToString();
             }
             else
             {
                 lives--;
+
+                livesText.text = lives.ToString();
+                
                 ScoreManager.Instance.onMultiplierLost();
                 Debug.Log("lives: " + lives);
                 Debug.Log( "Game failed: " + result.miniGameName);
