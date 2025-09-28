@@ -668,6 +668,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d4b3f4379ba5b54b9fa5845a6abb8b2, type: 2}
   - {fileID: 11400000, guid: 664f18d8b5d657044a498eed611b265e, type: 2}
   - {fileID: 11400000, guid: c8fdba399e472104bae09277c3a53246, type: 2}
+  - {fileID: 11400000, guid: 5a4483e409c67ce45811d86bcb3be9d4, type: 2}
+  - {fileID: 11400000, guid: d7a8f490c8def5944aa86d49bb00f61e, type: 2}
   discardedGames: []
   selectedGameIndex: 0
   gamesPlayed: 0

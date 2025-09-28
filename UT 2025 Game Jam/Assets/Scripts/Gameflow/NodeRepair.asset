@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NodeRepair
   m_EditorClassIdentifier: 
   miniGameName: NodeRepairGame
-  timeLimit: 8
+  timeLimit: 10
