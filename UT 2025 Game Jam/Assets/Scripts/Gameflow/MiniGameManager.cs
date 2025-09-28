@@ -13,7 +13,7 @@ public class MiniGameManager : MonoBehaviour
 
     [SerializeField] private int selectedGameIndex;
     [SerializeField] private int gamesPlayed = 0;
-    [SerializeField] private int gamesBeforeReset;
+    private int gamesBeforeReset = 4;
 
     void Awake()
     {
@@ -98,6 +98,11 @@ public class MiniGameManager : MonoBehaviour
         if (selectedGameIndex >= 0 )
         {
             discardedGames.Add(miniGames[selectedGameIndex]);
+
+            for (int i = 0; i < discardedGames.Count; i++)
+            {
+                Debug.Log(discardedGames[i]);
+            }
             miniGames.RemoveAt(selectedGameIndex);
         }
         else
