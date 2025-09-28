@@ -645,10 +645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc1483d4f021164d8b3c5b08be483e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onLoopCompleted: {fileID: 11400000, guid: 37ec742d60ead3644b02b6610385f51c, type: 2}
-  onLifeLost: {fileID: 0}
-  onShieldLost: {fileID: 0}
-  onGameOver: {fileID: 0}
   lives: 3
   shields: 3
   timeRemaining: 45
@@ -667,9 +663,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGames:
-  - {fileID: 11400000, guid: c8fdba399e472104bae09277c3a53246, type: 2}
+  - {fileID: 11400000, guid: 352b966835673124fb6dd6a5f1d92f63, type: 2}
+  - {fileID: 11400000, guid: 6b437e3ac7c09d549864ba6fc962d151, type: 2}
+  - {fileID: 11400000, guid: e6a16242fd8f5124e965948dabbc5c93, type: 2}
+  - {fileID: 11400000, guid: 9d4b3f4379ba5b54b9fa5845a6abb8b2, type: 2}
   - {fileID: 11400000, guid: 664f18d8b5d657044a498eed611b265e, type: 2}
+  - {fileID: 11400000, guid: c8fdba399e472104bae09277c3a53246, type: 2}
+  discardedGames: []
   selectedGameIndex: 0
+  gamesPlayed: 0
 --- !u!114 &1213262240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,7 +829,6 @@ MonoBehaviour:
   multText: {fileID: 0}
   totalScore: 0
   totalMult: 1
-  miniGameComplete: {fileID: 11400000, guid: 3f914e6ea9b809c4c96f7dcd1b0300a0, type: 2}
 --- !u!1 &1487960623
 GameObject:
   m_ObjectHideFlags: 0
