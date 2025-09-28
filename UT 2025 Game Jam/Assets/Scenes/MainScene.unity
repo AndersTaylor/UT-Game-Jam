@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7405233502697469866, guid: 61309e291b355274696679c91ccc1b13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -753,7 +757,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &757612467
 RectTransform:
@@ -1126,6 +1130,9 @@ MonoBehaviour:
   streak: 0
   multiplier: 1
   basepoint: 1
+  prehistoricGuy: {fileID: 4744358666940083923, guid: 61309e291b355274696679c91ccc1b13, type: 3}
+  midevilGuy: {fileID: 4713098047411072016, guid: 39efa40ad86ad2d418d0355d47c3ca60, type: 3}
+  postApoGuy: {fileID: 2974246949425551612, guid: 9952986e9af66f04289793faf9ad8e58, type: 3}
 --- !u!1 &1279949179
 GameObject:
   m_ObjectHideFlags: 0

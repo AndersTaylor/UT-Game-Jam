@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text livesText;
     public TMP_Text shieldText;
+    
 
 
     private void OnEnable()

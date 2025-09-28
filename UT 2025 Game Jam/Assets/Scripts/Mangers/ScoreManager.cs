@@ -34,6 +34,10 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private float multiplier = 1f;
     [SerializeField] private float basepoint = 1f;
     
+    [SerializeField] private GameObject prehistoricGuy;
+    [SerializeField] private GameObject midevilGuy;
+    [SerializeField] private GameObject postApoGuy;
+    private GameObject currentGuy;
 
     private AudioSource audioSource;
     private bool shouldIncrementScore;
@@ -43,6 +47,8 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
+        currentGuy = prehistoricGuy;
     }
 
     void Update()
@@ -61,9 +67,19 @@ public class ScoreManager : MonoBehaviour
         addMiniGameWinMultiplier();
         Debug.Log("Multiplier: " + multiplier + " Streak: " + streak);
         shouldIncrementScore = true;
-        
-        //scoreText.gameObject.SetActive(true);
-        //multText.gameObject.SetActive(true);
+
+        if (streak > 10)
+        {
+            currentGuy = postApoGuy;
+        }
+        else if (streak > 5)
+        {
+            currentGuy = midevilGuy;
+        }
+        else
+        {
+            currentGuy = prehistoricGuy;
+        }
     }
 
     private void IncrementScore()
