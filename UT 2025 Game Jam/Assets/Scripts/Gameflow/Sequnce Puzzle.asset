@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Sequnce Puzzle
   m_EditorClassIdentifier: 
   miniGameName: Sequnce Puzzle 1
-  timeLimit: 0
+  timeLimit: 15
