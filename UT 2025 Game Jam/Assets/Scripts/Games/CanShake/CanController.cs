@@ -39,16 +39,31 @@ public class CanController : MonoBehaviour
         {
             timerText.text = "you disappoint me. - Hideo Kojima";
             shakeText.text = "Failure!";
+<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/CanController.cs
+=======
+            
+            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CanShake", success: false));
+>>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/CanShake/CanController.cs
         }
         else if (spill && !success)
         {
             shakeText.text = "You spilled!";
             timerText.text = "\"no more metal gear.\" - Hideo \"Game\" Kojima";
+<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/CanController.cs
+=======
+            
+            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CanShake", success: false));
+>>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/CanShake/CanController.cs
         }
         else if (success && !spill)
         {
             shakeText.text = "Success!";
             timerText.text = "\"hideo game.\" - Hideo \"Game\" Kojima";
+<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/CanController.cs
+=======
+            
+            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CanShake", true, 1));
+>>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/CanShake/CanController.cs
         }
         else
         {

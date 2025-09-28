@@ -24,11 +24,7 @@ public class ShapePusherGameManager : MonoBehaviour
         if (CheckSensors())
         {
 <<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/ShapePush/ShapePusherGameManager.cs
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/ShapePush/ShapePusherGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Shape Pusher", true, 1));
-=======
-            FindFirstObjectByType<GameManager>().MiniGameSuccess();
->>>>>>> parent of e654fca (Added Event Bus system to game manger system):UT 2025 Game Jam/Assets/Scripts/ShapePusherGameManager.cs
             
 =======
 >>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/ShapePusherGameManager.cs
@@ -45,11 +41,7 @@ public class ShapePusherGameManager : MonoBehaviour
         if (timer <= 0)
         {
 <<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/ShapePush/ShapePusherGameManager.cs
-<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/ShapePush/ShapePusherGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("Shape Pusher", false));
-=======
-            FindFirstObjectByType<GameManager>().MiniGameFailed();
->>>>>>> parent of e654fca (Added Event Bus system to game manger system):UT 2025 Game Jam/Assets/Scripts/ShapePusherGameManager.cs
             
 =======
 >>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/ShapePusherGameManager.cs

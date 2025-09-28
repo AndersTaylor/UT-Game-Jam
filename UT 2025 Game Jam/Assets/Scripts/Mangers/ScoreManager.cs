@@ -6,7 +6,13 @@ using Random = UnityEngine.Random;
 
 public class ScoreManager : MonoBehaviour
 {
+<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/Score/ScoreManager.cs
     // Set Singleton
+=======
+     // Set Singleton
+    public static ScoreManager Instance { get; private set; }
+   
+>>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/ScoreManager.cs
     private static ScoreManager instance;
     private void Awake()
     {
