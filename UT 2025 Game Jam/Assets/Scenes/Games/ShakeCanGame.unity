@@ -760,7 +760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Timer:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 820a6f7756af7194580c6a0e21f55b16, type: 2}
   m_sharedMaterial: {fileID: -5953268902723562881, guid: 820a6f7756af7194580c6a0e21f55b16, type: 2}
