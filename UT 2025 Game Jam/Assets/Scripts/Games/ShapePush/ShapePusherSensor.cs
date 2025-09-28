@@ -11,12 +11,6 @@ public class ShapePusherSensor : MonoBehaviour
         filled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(shape);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // checks if shape matches sensor; resets if false
