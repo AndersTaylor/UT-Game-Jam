@@ -60,17 +60,19 @@ public class GameManager : MonoBehaviour
         {
             MiniGameTimer.Instance.ResetTimer(MiniGameManager.Instance.timeToCompleteGame());
             MiniGameManager.Instance.OnMiniGameComplete();
-            Debug.Log("Game Complete" + result.miniGameName + " Score Gained: " + result.scoreGained);
+            Debug.Log( "Game Complete" + result.miniGameName + " Score Gained: " + result.scoreGained);
 
             if (result.scoreGained != 0)
             {
+                MiniGameTimer.Instance.shouldDecrementTimer = false;
                 ScoreManager.Instance.ChangeScore(result.scoreGained);
             }
         }
         else
         {
             MiniGameManager.Instance.OnMiniGameComplete();
-
+            ScoreManager.Instance.ChangeScore(0);
+            
             if (shields > 0)
             {
                 shields--;
@@ -80,7 +82,7 @@ public class GameManager : MonoBehaviour
                 lives--;
                 ScoreManager.Instance.onMultiplierLost();
                 Debug.Log("lives: " + lives);
-                Debug.Log("Game failed: " + result.miniGameName);
+                Debug.Log( "Game failed: " + result.miniGameName);
 
                 if (lives <= 0)
                 {
@@ -93,6 +95,11 @@ public class GameManager : MonoBehaviour
     public void addShield()
     {
         shields++;
+    }
+
+    private void LoopManager()
+    {
+        int gamesThisLoop = 3 * loopsCompleted;
     }
     
     public void GameOver()

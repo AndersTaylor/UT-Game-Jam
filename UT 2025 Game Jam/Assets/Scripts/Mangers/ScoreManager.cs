@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -36,6 +38,7 @@ public class ScoreManager : MonoBehaviour
     private AudioSource audioSource;
     private bool shouldIncrementScore;
     private int tempScore;
+    
 
     private void Start()
     {
@@ -60,6 +63,7 @@ public class ScoreManager : MonoBehaviour
         shouldIncrementScore = true;
         
         scoreText.gameObject.SetActive(true);
+        multText.gameObject.SetActive(true);
     }
 
     private void IncrementScore()
@@ -76,7 +80,7 @@ public class ScoreManager : MonoBehaviour
         else
         {
             shouldIncrementScore = false;
-            scoreText.gameObject.SetActive(false);
+            StartCoroutine(WaitThenLoad(3));
         }
     }
 
@@ -112,6 +116,16 @@ public class ScoreManager : MonoBehaviour
     public void ChangeMult(float multToAdd)
     {
         totalMult += multToAdd;
-        multText.text = totalMult.ToString();
+        multText.text =  "Streak Multiplier: " + totalMult;
+    }
+
+    private IEnumerator WaitThenLoad(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        scoreText.gameObject.SetActive(false);
+        multText.gameObject.SetActive(false);
+
+        MiniGameTimer.Instance.shouldDecrementTimer = true;
+        MiniGameManager.Instance.StartNextMiniGame();
     }
 }
