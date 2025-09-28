@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CircularCalibration
   m_EditorClassIdentifier: 
   miniGameName: Reposition Hydroplanes
-  timeLimit: 5
+  timeLimit: 8

@@ -23,7 +23,7 @@ public class RepositionHydroplanes : MonoBehaviour
     {
         StartCoroutine(RotateHydroplanes());
         hydroplanesAlignedScript = hydroplanesAlignedObject.GetComponent<HydroplanesAligned>(); //Find the HydroplanesAligned script in the scene
-        hydroplanesAlignedScript.AttemptsText.text = $"Attempts remaining: {hydroplanesAlignedScript.attemptsRemaining}"; // Set the initial attempts text
+        //hydroplanesAlignedScript.AttemptsText.text = $"Attempts remaining: {hydroplanesAlignedScript.attemptsRemaining}"; // Set the initial attempts text
         if (hydroplanesAlignedScript == null)
         {
             Debug.LogError("HydroplanesAligned script not found in the scene.");
@@ -75,10 +75,10 @@ public class RepositionHydroplanes : MonoBehaviour
             
            // Debug.Log("Indicator is not aligned with the triangle!");
             hydroplanesAlignedScript.attemptsRemaining--;
-            hydroplanesAlignedScript.AttemptsText.text = $"Incorrect alignment. Attempts remaining: {hydroplanesAlignedScript.attemptsRemaining}";
+           // hydroplanesAlignedScript.AttemptsText.text = $"Incorrect alignment. Attempts remaining: {hydroplanesAlignedScript.attemptsRemaining}";
             if (hydroplanesAlignedScript.attemptsRemaining <= 0)
             {
-                hydroplanesAlignedScript.AttemptsText.text = "No attempts remaining!";
+               // hydroplanesAlignedScript.AttemptsText.text = "No attempts remaining!";
                 hydroplanesAlignedScript.stopAllRotations();
                 
             } 

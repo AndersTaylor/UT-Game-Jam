@@ -5,7 +5,7 @@ public class HydroplanesAligned : MonoBehaviour
 {
     [SerializeField] private GameObject[] circularCalibrator; // Array of hydroplane scripts
     public int attemptsRemaining; // Number of attempts remaining
-    public TMP_Text AttemptsText; // Reference to the TextMeshProUGUI component to display attempts
+    //public TMP_Text AttemptsText; // Reference to the TextMeshProUGUI component to display attempts
     [SerializeField] AudioSource source;
     //[SerializeField] private Room roomToLoadAfterCompletion; // Reference to the room to load after completion
    //[SerializeField] private Chapter ChapterToLoadAfterCompletion; // Reference to the room to load after completion
@@ -29,7 +29,7 @@ public class HydroplanesAligned : MonoBehaviour
         {
             calibrator.GetComponent<RepositionHydroplanes>().OnIndicatorAligned -= CheckAlignmentStatus;
         }
-        AttemptsText.text = $"Attempts remaining: {attemptsRemaining}";
+       // AttemptsText.text = $"Attempts remaining: {attemptsRemaining}";
     }
 
     private void CheckAlignmentStatus()
@@ -39,10 +39,6 @@ public class HydroplanesAligned : MonoBehaviour
         {
             source.Stop();
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CircularCalibration", true, 1));
-        }
-        else if (attemptsRemaining == 0)
-        { 
-            
         }
 
 
