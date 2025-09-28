@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,14 +33,31 @@ public class GameManager : MonoBehaviour
     public int shields;
     public float timeRemaining;
     public int loopsCompleted;
-
+    public GameObject clickParticles;
+    
+    private AudioSource click;
     private ScoreManager scoreManager;
     private void Initialize()
     {
         if (scoreManager == null)
         {
             scoreManager = FindFirstObjectByType<ScoreManager>();
+            click = GetComponent<AudioSource>();
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            ClickJuice();
+        }
+    }
+
+    private void ClickJuice()
+    {
+        click.Play();
+        click.pitch = Random.Range(1.3f, 2f);
     }
 
     public void CompleteLoop()

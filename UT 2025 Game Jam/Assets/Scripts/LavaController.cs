@@ -23,7 +23,7 @@ public class LavaController : MonoBehaviour
         if (player != null)
         {
             isGrow = false;
-            Debug.Log("dead");
+           // Debug.Log("dead");
         }
     }
 }

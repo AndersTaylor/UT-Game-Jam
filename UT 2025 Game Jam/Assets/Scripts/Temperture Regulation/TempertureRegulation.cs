@@ -85,13 +85,13 @@ public class TempertureRegulation : MonoBehaviour
             {
                 elapsedTime += Time.deltaTime; // Increment the timer
                 TimerText.text = $"Calibration Time: {elapsedTime:F1}/{calibrationTime} seconds"; // Update the timer text
-                Debug.Log($"Calibration in progress: {elapsedTime:F1}/{calibrationTime} seconds");
+              //  Debug.Log($"Calibration in progress: {elapsedTime:F1}/{calibrationTime} seconds");
             }
 
             yield return null; // Wait for the next frame
         }
 
-        Debug.Log("Calibration complete!");
+      //  Debug.Log("Calibration complete!");
         OnCalibrationComplete(); // Trigger the calibration complete event
         isCalibrating = false;
     }
@@ -100,7 +100,7 @@ public class TempertureRegulation : MonoBehaviour
     {
         // Add logic for what happens when calibration is complete
         TimerText.text = "Temperature calibrated!";
-        Debug.Log("Temperature successfully calibrated!");
+       // Debug.Log("Temperature successfully calibrated!");
         StopAllCoroutines(); // Stop the temperature decrease coroutine
        
         
