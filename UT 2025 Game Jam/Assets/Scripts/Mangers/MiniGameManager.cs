@@ -69,13 +69,9 @@ public class MiniGameManager : MonoBehaviour
 
     public float timeToCompleteGame()
     {
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/Gameflow/MiniGameManager.cs
-        Debug.Log(miniGames[selectedGameIndex].timeLimit);
-=======
         //Debug.Log(miniGames[selectedGameIndex].timeLimit);
        // Debug.Log("selected index: " + selectedGameIndex);
         //Debug.Log("games count: " + miniGames.Count);
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Mangers/MiniGameManager.cs
         return miniGames[selectedGameIndex].timeLimit;
     }
 
@@ -116,7 +112,7 @@ public class MiniGameManager : MonoBehaviour
             //Debug.LogWarning("selectedGameIndex out of range!");
         }
         gamesPlayed++;
-        Debug.Log($"discardedGames count: {discardedGames.Count}");
+       // Debug.Log($"discardedGames count: {discardedGames.Count}");
 
         if (gamesPlayed >= gamesBeforeReset)
         {

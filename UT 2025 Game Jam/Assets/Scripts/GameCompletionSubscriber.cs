@@ -29,7 +29,7 @@ public class GameCompletionSubscriber : MonoBehaviour
     {
         if (enableDebugLogs)
         {
-            Debug.Log("Game completed! Subscriber received notification.");
+           // Debug.Log("Game completed! Subscriber received notification.");
         }
         
         // Example actions that could be performed:
@@ -55,6 +55,6 @@ public class GameCompletionSubscriber : MonoBehaviour
         // Example: Show completion screen
         // Example: Play victory sound
         
-        Debug.Log("Handling game completion in subscriber...");
+        //Debug.Log("Handling game completion in subscriber...");
     }
 }
