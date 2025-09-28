@@ -31,7 +31,11 @@ public class RepairNodeGameManager : MonoBehaviour
         if (time <= 0 && !CheckNodes())
         {
 <<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/RepairNode/RepairNodeGameManager.cs
+<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/RepairNode/RepairNodeGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("RepairNode", false));
+=======
+            FindFirstObjectByType<GameManager>().MiniGameFailed();
+>>>>>>> parent of e654fca (Added Event Bus system to game manger system):UT 2025 Game Jam/Assets/Scripts/RepairNodeGameManager.cs
             
 =======
 >>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/RepairNodeGameManager.cs
@@ -47,7 +51,11 @@ public class RepairNodeGameManager : MonoBehaviour
         if (CheckNodes())
         {
 <<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/RepairNode/RepairNodeGameManager.cs
+<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/RepairNode/RepairNodeGameManager.cs
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("RepairNode", true, 1));
+=======
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
+>>>>>>> parent of e654fca (Added Event Bus system to game manger system):UT 2025 Game Jam/Assets/Scripts/RepairNodeGameManager.cs
             
 =======
 >>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/RepairNodeGameManager.cs

@@ -36,19 +36,11 @@ public class HydroplanesAligned : MonoBehaviour
         // Check if all indicators are aligned
         if (AreAllIndicatorsAligned())
         {
-<<<<<<< Updated upstream:UT 2025 Game Jam/Assets/Scripts/Circular Calibaration/Hydroplanes Aligned.cs
             
         }
         else if (attemptsRemaining == 0)
         { 
             
-=======
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CircularCalibration", true, 1));
-        }
-        else if (attemptsRemaining == 0)
-        { 
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("CircularCalibration", false));
->>>>>>> Stashed changes:UT 2025 Game Jam/Assets/Scripts/Games/Circular Calibaration/Hydroplanes Aligned.cs
         }
 
 

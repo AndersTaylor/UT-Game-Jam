@@ -33,7 +33,11 @@ public class LavaRisingGameManager : MonoBehaviour
         if (CheckNodes())
         {
 <<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/LavaRising/LavaRisingGameManager.cs
+<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/LavaRising/LavaRisingGameManager.cs
            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("LavaRising", true, 1));
+=======
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
+>>>>>>> parent of e654fca (Added Event Bus system to game manger system):UT 2025 Game Jam/Assets/Scripts/LavaRisingGameManager.cs
             
 =======
 >>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/LavaRisingGameManager.cs
@@ -48,7 +52,11 @@ public class LavaRisingGameManager : MonoBehaviour
             if (time <= 0 || !lava.GetComponent<LavaController>().isGrow)
             {
 <<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/LavaRising/LavaRisingGameManager.cs
+<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/LavaRising/LavaRisingGameManager.cs
                 MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("LavaRising", false));
+=======
+                FindFirstObjectByType<GameManager>().MiniGameFailed();
+>>>>>>> parent of e654fca (Added Event Bus system to game manger system):UT 2025 Game Jam/Assets/Scripts/LavaRisingGameManager.cs
                 
 =======
 >>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/LavaRisingGameManager.cs

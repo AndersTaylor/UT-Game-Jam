@@ -32,8 +32,8 @@ public class EnergyCoreManager : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
             {
                 timerText.text = "Success!";
-
-                MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", true, 1));
+                
+                FindFirstObjectByType<GameManager>().MiniGameSuccess();
             }
             else
                 timerText.text = "Time: " + (int)timer;
@@ -41,8 +41,8 @@ public class EnergyCoreManager : MonoBehaviour
         else if (failed)
         {
             timerText.text = "Failure!";
-
-            MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", false));
+            
+            FindFirstObjectByType<GameManager>().MiniGameFailed();
         }
 
     }
@@ -73,6 +73,7 @@ public class EnergyCoreManager : MonoBehaviour
         {
             timerText.text = "Success!";
 <<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/EnergyCore/EnergyCoreManager.cs
+<<<<<<< HEAD:UT 2025 Game Jam/Assets/Scripts/Games/EnergyCore/EnergyCoreManager.cs
 
             MiniGameEventBus.RaiseOnMiniGameComplete(new MiniGameEventBus.Result("EnergyCore", true, 1));
 =======
@@ -81,6 +82,10 @@ public class EnergyCoreManager : MonoBehaviour
             source.PlayOneShot(repaired);
             FindFirstObjectByType<GameManager>().MiniGameSuccess();
 >>>>>>> d1debe63e70dc5f1434182d4034bfdc2c47f1e04:UT 2025 Game Jam/Assets/Scripts/EnergyCoreManager.cs
+=======
+            
+            FindFirstObjectByType<GameManager>().MiniGameSuccess();
+>>>>>>> parent of e654fca (Added Event Bus system to game manger system):UT 2025 Game Jam/Assets/Scripts/EnergyCoreManager.cs
         }
     }
 
