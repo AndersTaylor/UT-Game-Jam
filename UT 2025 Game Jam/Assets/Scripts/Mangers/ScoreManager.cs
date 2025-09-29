@@ -37,7 +37,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private GameObject prehistoricGuy;
     [SerializeField] private GameObject midevilGuy;
     [SerializeField] private GameObject postApoGuy;
-    private GameObject currentGuy;
+    [SerializeField] private GameObject currentGuy;
 
     private AudioSource audioSource;
     private bool shouldIncrementScore;
@@ -68,11 +68,11 @@ public class ScoreManager : MonoBehaviour
         Debug.Log("Multiplier: " + multiplier + " Streak: " + streak);
         shouldIncrementScore = true;
 
-        if (streak > 10)
+        if (streak > 3)
         {
             currentGuy = postApoGuy;
         }
-        else if (streak > 5)
+        else if (streak > 2)
         {
             currentGuy = midevilGuy;
         }
