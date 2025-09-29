@@ -37,7 +37,8 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private GameObject prehistoricGuy;
     [SerializeField] private GameObject midevilGuy;
     [SerializeField] private GameObject postApoGuy;
-    [SerializeField] private GameObject currentGuy;
+    [SerializeField] private GameObject guyParent;
+    private GameObject tempGuy;
 
     private AudioSource audioSource;
     private bool shouldIncrementScore;
@@ -48,7 +49,8 @@ public class ScoreManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        currentGuy = prehistoricGuy;
+        tempGuy = prehistoricGuy;
+        Instantiate(tempGuy, guyParent.transform);
     }
 
     void Update()
@@ -70,15 +72,18 @@ public class ScoreManager : MonoBehaviour
 
         if (streak > 3)
         {
-            currentGuy = postApoGuy;
+            GameObject tempGuy = postApoGuy;
+            Instantiate(tempGuy, guyParent.transform);
         }
         else if (streak > 2)
         {
-            currentGuy = midevilGuy;
+            tempGuy = midevilGuy;
+            Instantiate(tempGuy, guyParent.transform);
         }
         else
         {
-            currentGuy = prehistoricGuy;
+            tempGuy = prehistoricGuy;
+            Instantiate(tempGuy, guyParent.transform);
         }
     }
 

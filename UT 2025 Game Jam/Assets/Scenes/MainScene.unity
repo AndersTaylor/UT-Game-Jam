@@ -995,7 +995,7 @@ MonoBehaviour:
   prehistoricGuy: {fileID: 4744358666940083923, guid: 61309e291b355274696679c91ccc1b13, type: 3}
   midevilGuy: {fileID: 4713098047411072016, guid: 39efa40ad86ad2d418d0355d47c3ca60, type: 3}
   postApoGuy: {fileID: 2974246949425551612, guid: 9952986e9af66f04289793faf9ad8e58, type: 3}
-  currentGuy: {fileID: 1023718488}
+  guyParent: {fileID: 1023718488}
 --- !u!1 &1279949179
 GameObject:
   m_ObjectHideFlags: 0
