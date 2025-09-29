@@ -49,8 +49,23 @@ public class ScoreManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        tempGuy = prehistoricGuy;
-        Instantiate(tempGuy, guyParent.transform);
+        int randy = Random.Range(0, 3);
+        if (randy == 0)
+        {
+            tempGuy = Instantiate(prehistoricGuy, guyParent.transform);
+        }
+        else if (randy == 1)
+        {
+            tempGuy = Instantiate(midevilGuy, guyParent.transform);
+        }
+        else if (randy == 2)
+        {
+            tempGuy = Instantiate(postApoGuy, guyParent.transform);
+        }
+        else
+        {
+            tempGuy = Instantiate(prehistoricGuy, guyParent.transform);
+        }
     }
 
     void Update()
@@ -69,22 +84,6 @@ public class ScoreManager : MonoBehaviour
         addMiniGameWinMultiplier();
         Debug.Log("Multiplier: " + multiplier + " Streak: " + streak);
         shouldIncrementScore = true;
-
-        if (streak > 3)
-        {
-            GameObject tempGuy = postApoGuy;
-            Instantiate(tempGuy, guyParent.transform);
-        }
-        else if (streak > 2)
-        {
-            tempGuy = midevilGuy;
-            Instantiate(tempGuy, guyParent.transform);
-        }
-        else
-        {
-            tempGuy = prehistoricGuy;
-            Instantiate(tempGuy, guyParent.transform);
-        }
     }
 
     private void IncrementScore()
