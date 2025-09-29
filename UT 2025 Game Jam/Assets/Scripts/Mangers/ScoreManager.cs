@@ -39,6 +39,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private GameObject postApoGuy;
     [SerializeField] private GameObject guyParent;
     private GameObject tempGuy;
+    private int cylce;
 
     private AudioSource audioSource;
     private bool shouldIncrementScore;
@@ -48,23 +49,50 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
+        
+        Instantiate(prehistoricGuy, guyParent.transform);
+        
+        /*
         int randy = Random.Range(0, 3);
         if (randy == 0)
         {
-            tempGuy = Instantiate(prehistoricGuy, guyParent.transform);
+            Instantiate(prehistoricGuy, guyParent.transform);
         }
         else if (randy == 1)
         {
-            tempGuy = Instantiate(midevilGuy, guyParent.transform);
+            Instantiate(midevilGuy, guyParent.transform);
         }
         else if (randy == 2)
         {
-            tempGuy = Instantiate(postApoGuy, guyParent.transform);
+            Instantiate(postApoGuy, guyParent.transform);
         }
         else
         {
-            tempGuy = Instantiate(prehistoricGuy, guyParent.transform);
+            Instantiate(prehistoricGuy, guyParent.transform);
+        }
+        */
+    }
+
+    public void ChangeBackground()
+    {
+        guyParent.transform.GetChild(guyParent.transform.childCount - 1).gameObject.SetActive(false);
+        
+        int randy = Random.Range(0, 3);
+        if (randy == 0)
+        {
+            Instantiate(prehistoricGuy, guyParent.transform);
+        }
+        else if (randy == 1)
+        {
+            Instantiate(midevilGuy, guyParent.transform);
+        }
+        else if (randy == 2)
+        {
+            Instantiate(postApoGuy, guyParent.transform);
+        }
+        else
+        {
+            Instantiate(prehistoricGuy, guyParent.transform);
         }
     }
 
@@ -84,6 +112,22 @@ public class ScoreManager : MonoBehaviour
         addMiniGameWinMultiplier();
         Debug.Log("Multiplier: " + multiplier + " Streak: " + streak);
         shouldIncrementScore = true;
+
+        switch (streak - 3)
+        {
+            case > 10:
+                guyParent.transform.GetChild(guyParent.transform.childCount - 1).gameObject.SetActive(false);
+                Instantiate(postApoGuy, guyParent.transform);
+                break;
+            case > 5:
+                guyParent.transform.GetChild(guyParent.transform.childCount - 1).gameObject.SetActive(false);
+                Instantiate(midevilGuy, guyParent.transform);
+                break;
+            default:
+                guyParent.transform.GetChild(guyParent.transform.childCount - 1).gameObject.SetActive(false);
+                Instantiate(prehistoricGuy, guyParent.transform);
+                break;
+        }
     }
 
     private void IncrementScore()
