@@ -280,9 +280,9 @@ TextureImporter:
       name: UI_LittleGuy_IdleandCelebration_7
       rect:
         serializedVersion: 2
-        x: 294
+        x: 312
         y: 690
-        width: 225
+        width: 207
         height: 219
       alignment: 9
       pivot: {x: 0.47458455, y: 0.0030250028}
@@ -347,7 +347,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1111
-        y: 683
+        y: 684
         width: 206
         height: 216
       alignment: 9
