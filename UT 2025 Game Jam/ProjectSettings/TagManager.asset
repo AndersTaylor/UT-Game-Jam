@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - HexNode
+  - ScoreText
   layers:
   - Default
   - TransparentFX
